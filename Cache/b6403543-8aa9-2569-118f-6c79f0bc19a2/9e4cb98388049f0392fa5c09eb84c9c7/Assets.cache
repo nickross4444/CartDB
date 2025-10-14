@@ -1,0 +1,499 @@
+- !<AssetCache>
+  AssetFiles:
+    3ef79079-bd4f-46c7-b277-78949c11a966: b6403543-8aa9-2569-118f-6c79f0bc19a2/9e4cb98388049f0392fa5c09eb84c9c7/Data/RoundedRectangleStrokeShader.ss_graph
+  Assets:
+    - !<ShaderGraphPass/3ef79079-bd4f-46c7-b277-78949c11a966>
+      PackagePath: ""
+      DefaultDefines:
+        []
+      DefaultProperties:
+        Port_Depth_N004:
+          typeIdx: 1
+          value: 1.000000
+        Port_FinalColor1_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor2_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor3_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_GSplatPointSize_N004:
+          typeIdx: 1
+          value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Input0_N008:
+          typeIdx: 1
+          value: 0.500000
+        Port_Input0_N010:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input0_N016:
+          typeIdx: 1
+          value: -0.500000
+        Port_Input0_N017:
+          typeIdx: 1
+          value: -0.500000
+        Port_Input0_N043:
+          typeIdx: 1
+          value: 2.000000
+        Port_Input0_N069:
+          typeIdx: 1
+          value: 2.000000
+        Port_Input1_N008:
+          typeIdx: 1
+          value: 0.500000
+        Port_Input1_N025:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Input1_N032:
+          typeIdx: 1
+          value: 2.000000
+        Port_Input1_N068:
+          typeIdx: 1
+          value: 0.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_RayDirection_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_RayOrigin_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Value3_N014:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N019:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N029:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N076:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N005:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N014:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N019:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N029:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N076:
+          typeIdx: 1
+          value: 0.000000
+        Port_WorldNormal_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_WorldTangent_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 1.000000}
+        Port_borderSoftness_N007:
+          typeIdx: 1
+          value: 0.030000
+      PassUiData: !<PassUiData>
+        ExtraDefines:
+          []
+        PassBindings:
+          - mLabel: Graph Parameters
+            mType: Invalid
+            mName: ""
+            mWidget: group_start
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Size
+            mType: Property
+            mName: size
+            mWidget: spinbox
+            mHint: "Property: size"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Corner Radius
+            mType: Property
+            mName: cornerRadius
+            mWidget: spinbox
+            mHint: "Property: cornerRadius"
+            mMin: 0.000100
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Background Texture
+            mType: Property
+            mName: backgroundTexture
+            mWidget: texture_group
+            mHint: "Property: backgroundTexture"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: useTexture
+            mType: Property
+            mName: useTexture
+            mWidget: spinbox
+            mHint: "Property: useTexture"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Texture Mode
+            mType: Property
+            mName: textureMode
+            mWidget: spinbox
+            mHint: "Property: textureMode"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Texture Wrap
+            mType: Property
+            mName: textureWrap
+            mWidget: spinbox
+            mHint: "Property: textureWrap"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Background Color
+            mType: Property
+            mName: backgroundColor
+            mWidget: color
+            mHint: "Property: backgroundColor"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Colors
+            mType: Property
+            mName: colors
+            mWidget: floatarray
+            mHint: "Property: colors"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Percents
+            mType: Property
+            mName: percents
+            mWidget: floatarray
+            mHint: "Property: percents"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Stops
+            mType: Property
+            mName: stops
+            mWidget: spinbox
+            mHint: "Property: stops"
+            mMin: ~
+            mMax: ~
+            mStep: 1.000000
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Linear Gradient Start
+            mType: Property
+            mName: linearGradientStart
+            mWidget: spinbox
+            mHint: "Property: linearGradientStart"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Linear Gradient End
+            mType: Property
+            mName: linearGradientEnd
+            mWidget: spinbox
+            mHint: "Property: linearGradientEnd"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Linear Gradient Angle
+            mType: Property
+            mName: linearGradientAngle
+            mWidget: spinbox
+            mHint: "Property: linearGradientAngle"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Linear Gradient Length
+            mType: Property
+            mName: linearGradientLength
+            mWidget: spinbox
+            mHint: "Property: linearGradientLength"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Gradient Start Position
+            mType: Property
+            mName: gradientStartPosition
+            mWidget: spinbox
+            mHint: "Property: gradientStartPosition"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Radial Gradient Length
+            mType: Property
+            mName: radialGradientLength
+            mWidget: spinbox
+            mHint: "Property: radialGradientLength"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border
+            mType: Property
+            mName: border
+            mWidget: spinbox
+            mHint: "Property: border"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Size
+            mType: Property
+            mName: borderSize
+            mWidget: spinbox
+            mHint: "Property: borderSize"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Gradient Type
+            mType: Property
+            mName: gradientType
+            mWidget: spinbox
+            mHint: "Property: gradientType"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Color
+            mType: Property
+            mName: borderColor
+            mWidget: color
+            mHint: "Property: borderColor"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Gradient Colors
+            mType: Property
+            mName: borderGradientColors
+            mWidget: floatarray
+            mHint: "Property: borderGradientColors"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Border Gradient Percents
+            mType: Property
+            mName: borderGradientPercents
+            mWidget: floatarray
+            mHint: "Property: borderGradientPercents"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Border Gradient Stops
+            mType: Property
+            mName: borderGradientStops
+            mWidget: spinbox
+            mHint: "Property: borderGradientStops"
+            mMin: ~
+            mMax: ~
+            mStep: 1.000000
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Border Linear Gradient Start
+            mType: Property
+            mName: borderLinearGradientStart
+            mWidget: spinbox
+            mHint: "Property: borderLinearGradientStart"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Linear Gradient End
+            mType: Property
+            mName: borderLinearGradientEnd
+            mWidget: spinbox
+            mHint: "Property: borderLinearGradientEnd"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Linear Gradient Angle
+            mType: Property
+            mName: borderLinearGradientAngle
+            mWidget: spinbox
+            mHint: "Property: borderLinearGradientAngle"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Linear Gradient Length
+            mType: Property
+            mName: borderLinearGradientLength
+            mWidget: spinbox
+            mHint: "Property: borderLinearGradientLength"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Gradient Start Position
+            mType: Property
+            mName: borderGradientStartPosition
+            mWidget: spinbox
+            mHint: "Property: borderGradientStartPosition"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Radial Gradient Length
+            mType: Property
+            mName: borderRadialGradientLength
+            mWidget: spinbox
+            mHint: "Property: borderRadialGradientLength"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Border Gradient Type
+            mType: Property
+            mName: borderGradientType
+            mWidget: spinbox
+            mHint: "Property: borderGradientType"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Opacity Factor
+            mType: Property
+            mName: opacityFactor
+            mWidget: slider
+            mHint: |-
+              Property: opacityFactor
+              
+              Multiplier On Outgoing Opacity (Make Sure To Enable Blending and Alpha on Color Mask)
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: ""
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Alpha Test Threshold
+            mType: Property
+            mName: alphaTestThreshold
+            mWidget: slider
+            mHint: |-
+              Property: alphaTestThreshold
+              
+              When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear.
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.001000
+            mDefaultVal: 0.500000
+            mValues:
+              []
+        ShaderType: Mesh3d
+      ShaderPath: b6403543-8aa9-2569-118f-6c79f0bc19a2/9e4cb98388049f0392fa5c09eb84c9c7/Data/b01d0f7/RoundedRectangleStrokeShader.glsl
+      Defines:
+        []
+      Properties:
+        {}
+  SourceHash: 9e4cb98388049f0392fa5c09eb84c9c7
+  FileHash: 18c52ff6cc7ac40b6f71fcb615f330cf
+  NativePackageItems:
+    []

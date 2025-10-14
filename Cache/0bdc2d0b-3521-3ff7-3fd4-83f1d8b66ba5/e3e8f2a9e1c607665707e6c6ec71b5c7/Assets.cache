@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    80426f23-febf-4cba-b0d0-3e139a29d48f: 0bdc2d0b-3521-3ff7-3fd4-83f1d8b66ba5/e3e8f2a9e1c607665707e6c6ec71b5c7/Data/eye-off-icon.png
+  Assets:
+    - !<FileTexture/80426f23-febf-4cba-b0d0-3e139a29d48f>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 96
+        Height: 96
+  SourceHash: e3e8f2a9e1c607665707e6c6ec71b5c7
+  FileHash: c7b85ed1ef155690e38fa59f9bf8df11
+  NativePackageItems:
+    []

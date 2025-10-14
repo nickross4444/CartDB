@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    5f95aff0-b093-4289-9abe-a60b6636d74c: 7a21b143-1cc3-4cd5-901d-722d2e438309/0a5a7cc53dbc56b947bc80cdff6bc171/Data/SnapCloud-1.png
+  Assets:
+    - !<FileTexture/5f95aff0-b093-4289-9abe-a60b6636d74c>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 512
+        Height: 512
+  SourceHash: 0a5a7cc53dbc56b947bc80cdff6bc171
+  FileHash: a0458fe415f6b943487f4be655732e69
+  NativePackageItems:
+    []

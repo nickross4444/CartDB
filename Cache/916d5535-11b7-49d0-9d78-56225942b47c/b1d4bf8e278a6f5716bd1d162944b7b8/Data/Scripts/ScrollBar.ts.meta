@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/99d185d5-543b-4f56-be99-045c55319dfc>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3a0acfde-55a9-47c6-911b-4a6f87490a05
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3a0acfde-55a9-47c6-911b-4a6f87490a05
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 050c25c7-531f-463b-bd33-90cd9d0185de
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/050c25c7-531f-463b-bd33-90cd9d0185de>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c4ec55be-629f-4a65-b220-5d6173ae32ac
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    orientation: false
+    scrollWindow: false
+    slider: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - orientation: Vertical
+      scrollWindow: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      slider: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string orientation = "Vertical" {"widget":"combobox", "values":[{"label":"Horizontal", "value":"Horizontal"}, {"label":"Vertical", "value":"Vertical"}]}'
+    - // @input AssignableType scrollWindow
+    - // @input AssignableType_1 slider

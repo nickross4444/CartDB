@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    9ca634a3-e97d-4e9a-975b-4c189c551a05: e8732cdb-ef28-4beb-8851-3f4c613d5b82/73ae035ecb4a55a08e4dd388a3948d7a/Data/spectacles.jpg
+  Assets:
+    - !<FileTexture/9ca634a3-e97d-4e9a-975b-4c189c551a05>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 2048
+        Height: 1279
+  SourceHash: 73ae035ecb4a55a08e4dd388a3948d7a
+  FileHash: 6ca09fffb3d6928e2ee0a1e3a3c40873
+  NativePackageItems:
+    []

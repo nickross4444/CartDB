@@ -1,0 +1,103 @@
+- !<AssetCache>
+  AssetFiles:
+    1ffcd85b-0ce4-4bdb-aeb0-cfffd62ee967: 4c472445-af4a-c7d5-6b32-11398507b128/c6326d1ecbbbc4e0876abe47b0232dfd/Data/CapsuleSphere.ss_graph
+  Assets:
+    - !<ShaderGraphPass/1ffcd85b-0ce4-4bdb-aeb0-cfffd62ee967>
+      PackagePath: ""
+      DefaultDefines:
+        []
+      DefaultProperties:
+        Port_Depth_N004:
+          typeIdx: 1
+          value: 1.000000
+        Port_FinalColor1_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor2_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor3_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_GSplatPointSize_N004:
+          typeIdx: 1
+          value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Input0_N023:
+          typeIdx: 1
+          value: 2.000000
+        Port_Input0_N030:
+          typeIdx: 1
+          value: 0.500000
+        Port_Input1_N012:
+          typeIdx: 1
+          value: 0.999900
+        Port_Input1_N013:
+          typeIdx: 1
+          value: 0.250000
+        Port_Input1_N015:
+          typeIdx: 1
+          value: -0.250000
+        Port_Input1_N016:
+          typeIdx: 1
+          value: 0.999900
+        Port_Input1_N031:
+          typeIdx: 1
+          value: -1.000000
+        Port_Input1_N032:
+          typeIdx: 1
+          value: 0.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_RayDirection_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_RayOrigin_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Value4_N009:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N020:
+          typeIdx: 1
+          value: 0.000000
+        Port_WorldNormal_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_WorldTangent_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 1.000000}
+      PassUiData: !<PassUiData>
+        ExtraDefines:
+          []
+        PassBindings:
+          - mLabel: Alpha Test Threshold
+            mType: Property
+            mName: alphaTestThreshold
+            mWidget: slider
+            mHint: |-
+              Property: alphaTestThreshold
+              
+              When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear.
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.001000
+            mDefaultVal: 0.500000
+            mValues:
+              []
+        ShaderType: Mesh3d
+      ShaderPath: 4c472445-af4a-c7d5-6b32-11398507b128/c6326d1ecbbbc4e0876abe47b0232dfd/Data/b01d0f7/CapsuleSphere.glsl
+      Defines:
+        []
+      Properties:
+        {}
+  SourceHash: c6326d1ecbbbc4e0876abe47b0232dfd
+  FileHash: fc91ab3dcc4abd59b7861a5e45a601bd
+  NativePackageItems:
+    []

@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    30f8d1d3-330f-48e8-adf9-3812015bd969: 01e92f62-a392-40c4-9c4c-59ebd4a4134d/ccbcd37e6c7b4724e2cb57b83c83215f/Data/arrow-diffuse_0.png
+  Assets:
+    - !<FileTexture/30f8d1d3-330f-48e8-adf9-3812015bd969>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 256
+        Height: 256
+  SourceHash: ccbcd37e6c7b4724e2cb57b83c83215f
+  FileHash: 3f56c6bb71ee4dbab47105aa274e9443
+  NativePackageItems:
+    []

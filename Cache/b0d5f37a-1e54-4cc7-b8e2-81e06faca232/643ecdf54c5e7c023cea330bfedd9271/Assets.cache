@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    2e0fce76-e716-48c5-a4c5-bcf2154cbb7c: b0d5f37a-1e54-4cc7-b8e2-81e06faca232/643ecdf54c5e7c023cea330bfedd9271/Data/LogoDark.png
+  Assets:
+    - !<FileTexture/2e0fce76-e716-48c5-a4c5-bcf2154cbb7c>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 347
+        Height: 91
+  SourceHash: 643ecdf54c5e7c023cea330bfedd9271
+  FileHash: da1450d8c89156cc7fb5c7d3449629b2
+  NativePackageItems:
+    []

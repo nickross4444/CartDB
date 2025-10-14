@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    3b075fbe-8d80-4a60-8266-2c374dd73356: a7b3b7b7-d401-5c76-8a7b-850de3351c02/735cc588cf43fc8624d5b1c22aaafa90/Data/DefaultSphere_reflection_map.jpg
+  Assets:
+    - !<FileTexture/3b075fbe-8d80-4a60-8266-2c374dd73356>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 512
+        Height: 512
+  SourceHash: 735cc588cf43fc8624d5b1c22aaafa90
+  FileHash: 8c40c070ea089663557982c08e65d9b6
+  NativePackageItems:
+    []

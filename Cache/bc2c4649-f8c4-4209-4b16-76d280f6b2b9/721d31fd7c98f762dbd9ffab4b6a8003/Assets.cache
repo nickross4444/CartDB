@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    9979ea97-474d-4a6a-85fe-879b052cca5b: bc2c4649-f8c4-4209-4b16-76d280f6b2b9/721d31fd7c98f762dbd9ffab4b6a8003/Data/DefaultButton.mesh
+  Assets:
+    - !<FileMesh/9979ea97-474d-4a6a-85fe-879b052cca5b>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 1024
+        Vertices: 658
+        Blendshapes:
+          []
+        Joints: 0
+        AabbSize: {x: 1.500000, y: 1.000000, z: 0.999999}
+  SourceHash: 721d31fd7c98f762dbd9ffab4b6a8003
+  FileHash: e57ac01d91dd5a780cbec4cbab487160
+  NativePackageItems:
+    []

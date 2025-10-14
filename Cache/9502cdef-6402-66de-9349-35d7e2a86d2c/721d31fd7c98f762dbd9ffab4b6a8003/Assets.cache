@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    ca2ceec8-be93-492f-a0a1-3efb27706a1e: 9502cdef-6402-66de-9349-35d7e2a86d2c/721d31fd7c98f762dbd9ffab4b6a8003/Data/DefaultSwitchKnob.mesh
+  Assets:
+    - !<FileMesh/ca2ceec8-be93-492f-a0a1-3efb27706a1e>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 1024
+        Vertices: 658
+        Blendshapes:
+          []
+        Joints: 0
+        AabbSize: {x: 1.500000, y: 1.000000, z: 0.999999}
+  SourceHash: 721d31fd7c98f762dbd9ffab4b6a8003
+  FileHash: e57ac01d91dd5a780cbec4cbab487160
+  NativePackageItems:
+    []

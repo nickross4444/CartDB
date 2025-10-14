@@ -1,0 +1,165 @@
+- !<AssetCache>
+  AssetFiles:
+    4d630303-8000-437c-9548-5b6b0c4171ac: 77d87d30-5492-d5ff-b874-f6b327293cf9/d9cb6fb46e672ae2a2126275392b9423/Data/BaseRoundedRectangle.ss_graph
+  Assets:
+    - !<ShaderGraphPass/4d630303-8000-437c-9548-5b6b0c4171ac>
+      PackagePath: ""
+      DefaultDefines:
+        []
+      DefaultProperties:
+        Port_Depth_N004:
+          typeIdx: 1
+          value: 1.000000
+        Port_FinalColor1_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor2_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor3_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_GSplatPointSize_N004:
+          typeIdx: 1
+          value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Input0_N008:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input0_N010:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input0_N016:
+          typeIdx: 1
+          value: -0.500000
+        Port_Input0_N017:
+          typeIdx: 1
+          value: -0.500000
+        Port_Input1_N025:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Input1_N032:
+          typeIdx: 1
+          value: 2.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_RayDirection_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_RayOrigin_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Value2_N007:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N007:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N014:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N019:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N029:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N005:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N007:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N014:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N019:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N029:
+          typeIdx: 1
+          value: 0.000000
+        Port_WorldNormal_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_WorldTangent_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 1.000000}
+      PassUiData: !<PassUiData>
+        ExtraDefines:
+          []
+        PassBindings:
+          - mLabel: Graph Parameters
+            mType: Invalid
+            mName: ""
+            mWidget: group_start
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Size
+            mType: Property
+            mName: size
+            mWidget: spinbox
+            mHint: "Property: size"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Corner Radius
+            mType: Property
+            mName: cornerRadius
+            mWidget: spinbox
+            mHint: "Property: cornerRadius"
+            mMin: 0.000100
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: ""
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Alpha Test Threshold
+            mType: Property
+            mName: alphaTestThreshold
+            mWidget: slider
+            mHint: |-
+              Property: alphaTestThreshold
+              
+              When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear.
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.001000
+            mDefaultVal: 0.500000
+            mValues:
+              []
+        ShaderType: Mesh3d
+      ShaderPath: 77d87d30-5492-d5ff-b874-f6b327293cf9/d9cb6fb46e672ae2a2126275392b9423/Data/b01d0f7/BaseRoundedRectangle.glsl
+      Defines:
+        []
+      Properties:
+        {}
+  SourceHash: d9cb6fb46e672ae2a2126275392b9423
+  FileHash: 4f3586516908e01bbdcf9c398a0c35dd
+  NativePackageItems:
+    []
