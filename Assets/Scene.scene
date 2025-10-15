@@ -298,7 +298,7 @@
       productManager: !<MappingBased.AssignableType> c10915c0-c9f6-48c9-8857-64b9b19b333f
       testBarcode: !<string> 0602652176517
       autoScanOnStart: true
-      autoScanDelay: !<float> 1.000000
+      autoScanDelay: !<float> 5.000000
       scanditServer: 10.223.60.197
       internetModule: !<reference.InternetModule> cf3f9d38-0df4-46f2-8334-223254ce23d2
   ScriptTypes:
@@ -999,7 +999,7 @@
   PrefabRemaps:
     []
   Name: "[SnapCloudRequirements]"
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3119,7 +3119,7 @@
   PrefabRemaps:
     []
   Name: CartManager
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3289,7 +3289,7 @@
   PrefabRemaps:
     []
   Name: Scanner
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -8598,7 +8598,7 @@
   PrefabRemaps:
     []
   Name: Product Info
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -8629,7 +8629,7 @@
     {}
   ScriptInputs:
     "":
-      supabaseProject: !<reference.SupabaseProject> d9e4a4f8-aca5-4d5d-993a-819ef7cee186
+      supabaseProject: !<reference.SupabaseProject> 4c436fc0-5f65-4e1f-b54a-0c42be2ad61f
       text: !<reference.Text> 973907ce-f50d-4c25-ae0d-f02c6eac6251
       disableWarningsWhenConfigured: true
       showSetupInstructions: true
@@ -9963,7 +9963,7 @@
     {}
   ScriptInputs:
     "":
-      snapCloudRequirements: !<MappingBased.AssignableType> f34b2ca9-bb3e-4714-ac7f-815de53c88ba
+      snapCloudRequirements: !<MappingBased.AssignableType> a9855b19-7b89-4463-b380-7dbad3bc77f3
       productNameText: !<reference.Text> af1917a0-2449-4faf-b940-96f550a0f91d
       productPriceText: !<reference.Text> 927dcb2f-456d-4b7b-b203-c2a072eba449
       nutritionScoreText: !<reference.Text> 3ff76638-8858-4912-a2dc-aca5612078f8
@@ -10063,7 +10063,7 @@
   PrefabRemaps:
     []
   Name: ProductManager
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
