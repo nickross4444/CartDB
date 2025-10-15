@@ -1,0 +1,143 @@
+- !<ObjectPrefab/2a6f1bb9-dc1f-4248-8b38-592eed628cc3>
+  PackagePath: ""
+  objects:
+    - !<own> 0828e2e2-0d34-48a7-9702-9003b0e867a3
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/0828e2e2-0d34-48a7-9702-9003b0e867a3>
+  PrefabRemaps:
+    - 0828e2e2-0d34-48a7-9702-9003b0e867a3: 0828e2e2-0d34-48a7-68fd-6ffc4f17985c
+    - 1bf95c12-794b-43e6-b235-40b483d24127: 1bf95c12-794b-43e6-4dca-bf4b7c2dbed8
+    - 6cb9c518-9d10-40d3-a4c7-3e925f4ab6ab: 6cb9c518-9d10-40d3-5b38-c16da0b54954
+    - 7b64703b-3204-45cb-8126-e052f3978837: 7b64703b-3204-45cb-7ed9-1fad0c6877c8
+    - 8edb313c-1242-4d2a-b145-bedd8e286ea4: 8edb313c-1242-4d2a-4eba-412271d7915b
+    - a0bc68d5-0462-4a3b-932b-0cdb1aaa0f55: a0bc68d5-0462-4a3b-6cd4-f324e555f0aa
+    - f72f9069-672a-44eb-bf65-8e3f17a75339: f72f9069-672a-44eb-409a-71c0e858acc6
+  Name: CartDataManager
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 6cb9c518-9d10-40d3-a4c7-3e925f4ab6ab
+    - !<own> 8edb313c-1242-4d2a-b145-bedd8e286ea4
+    - !<own> f72f9069-672a-44eb-bf65-8e3f17a75339
+  Components:
+    []
+- !<ScriptComponent/1bf95c12-794b-43e6-b235-40b483d24127>
+  PrefabRemaps:
+    []
+  Name: CartManager
+  Enabled: true
+  ScriptAsset: !<reference> 95bc1ec4-49e1-488c-9c37-6b9da50f27ab
+  ScriptInputsDefault:
+    cartItemsText: true
+    totalPriceText: true
+    averageNutritionScoreText: true
+    logText: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      productManager: !<MappingBased.AssignableType> a0bc68d5-0462-4a3b-932b-0cdb1aaa0f55
+      cartItemsText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      totalPriceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      averageNutritionScoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      logText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/6cb9c518-9d10-40d3-a4c7-3e925f4ab6ab>
+  PrefabRemaps:
+    []
+  Name: Scanner
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 7b64703b-3204-45cb-8126-e052f3978837
+- !<ScriptComponent/7b64703b-3204-45cb-8126-e052f3978837>
+  PrefabRemaps:
+    []
+  Name: BarcodeScanner
+  Enabled: true
+  ScriptAsset: !<reference> 2f4a395f-1db1-4a8d-946c-53bb515263b5
+  ScriptInputsDefault:
+    scanditServer: true
+    internetModule: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      productManager: !<MappingBased.AssignableType> a0bc68d5-0462-4a3b-932b-0cdb1aaa0f55
+      testBarcode: !<string> 0602652176517
+      autoScanOnStart: true
+      autoScanDelay: !<float> 1.000000
+      scanditServer: 10.223.60.197
+      internetModule: !<reference.InternetModule> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/8edb313c-1242-4d2a-b145-bedd8e286ea4>
+  PrefabRemaps:
+    []
+  Name: ProductManager
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a0bc68d5-0462-4a3b-932b-0cdb1aaa0f55
+- !<ScriptComponent/a0bc68d5-0462-4a3b-932b-0cdb1aaa0f55>
+  PrefabRemaps:
+    []
+  Name: ProductManager
+  Enabled: true
+  ScriptAsset: !<reference> 51b8b2f9-1963-41c6-9ba6-c0704ebab86f
+  ScriptInputsDefault:
+    nutritionScoreText: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      snapCloudRequirements: !<MappingBased.AssignableType> f34b2ca9-bb3e-4714-ac7f-815de53c88ba
+      productNameText: !<reference.Text> c2596754-3b78-40fe-90fa-fdcf24da1c29
+      productPriceText: !<reference.Text> 2a19c860-1cf3-4acc-9d22-435b67bfcb7f
+      nutritionScoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      productDetailsText: !<reference.Text> 5ffa9224-c2ac-46ee-90ca-11fb76d459ce
+      logText: !<reference.Text> 6edda3c5-6ecc-4921-99b6-c1bc2e4a0486
+      cartManager: !<MappingBased.AssignableType_1> 1bf95c12-794b-43e6-b235-40b483d24127
+      addToCartButton: !<MappingBased.AssignableType_2> c7739d65-3a78-42b9-a15b-ac7d064df15a
+      cancelButton: !<MappingBased.AssignableType_3> 124c17a8-621c-49b2-bd5c-dbe4b6d91f46
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/f72f9069-672a-44eb-bf65-8e3f17a75339>
+  PrefabRemaps:
+    []
+  Name: CartManager
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1bf95c12-794b-43e6-b235-40b483d24127

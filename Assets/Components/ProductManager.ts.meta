@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/fdae7385-d7a1-4afe-8129-85bf0caca3c5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 51b8b2f9-1963-41c6-9ba6-c0704ebab86f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 51b8b2f9-1963-41c6-9ba6-c0704ebab86f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 42c29f46-1dc6-40f6-8712-aa60f6902a8e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/42c29f46-1dc6-40f6-8712-aa60f6902a8e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f160ef1-a66c-4fda-bc65-afbe44e2e0da
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    addToCartButton: false
+    cancelButton: false
+    cartManager: false
+    logText: false
+    nutritionScoreText: false
+    productDetailsText: false
+    productNameText: false
+    productPriceText: false
+    snapCloudRequirements: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - snapCloudRequirements: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      productNameText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      productPriceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      nutritionScoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      productDetailsText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      logText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      cartManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      addToCartButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      cancelButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType snapCloudRequirements {"hint":"Reference to SnapCloudRequirements for centralized Supabase configuration"}'
+    - '// @input Component.Text productNameText {"hint":"Optional: Text component to display product name"}'
+    - '// @input Component.Text productPriceText {"hint":"Optional: Text component to display product price"}'
+    - '// @input Component.Text nutritionScoreText {"hint":"Optional: Text component to display nutrition score"}'
+    - '// @input Component.Text productDetailsText {"hint":"Optional: Text component to display product details"}'
+    - '// @input Component.Text logText {"hint":"Optional: Text component to display logs on device"}'
+    - '// @input AssignableType_1 cartManager {"hint":"Optional: CartManager reference for automatic add-to-cart integration"}'
+    - '// @input AssignableType_2 addToCartButton {"hint":"Optional: Button to add current product to cart"}'
+    - '// @input AssignableType_3 cancelButton {"hint":"Optional: Button to cancel/clear current product selection"}'

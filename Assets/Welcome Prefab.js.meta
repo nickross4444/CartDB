@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/d4e1874e-8ef7-43c7-bbac-a4ea33a9cf64>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 67b9780b-e38f-4a65-886a-8682b69a53d9
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 67b9780b-e38f-4a65-886a-8682b69a53d9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 3a114fde-f1f9-4968-b412-8b59a0502bf0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/3a114fde-f1f9-4968-b412-8b59a0502bf0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 598b938f-bdcd-4236-be81-bbd185f6ae14
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    acknowledgeButton: false
+    containerFrameUI: false
+    everythingButton: false
+    veganButton: false
+    vegetarianButton: false
+    welcomePrefab: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - welcomePrefab: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      veganButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      vegetarianButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      everythingButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      acknowledgeButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      containerFrameUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
