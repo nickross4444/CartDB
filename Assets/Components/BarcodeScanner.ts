@@ -93,7 +93,7 @@ export class BarcodeScanner extends BaseScriptComponent {
         // Get shared client and services from ProductManager
         this.client = this.productManager.getClient();
     }
-    
+
     /**
      * Setup camera to send image to server (Scandit)
      */
@@ -118,79 +118,41 @@ export class BarcodeScanner extends BaseScriptComponent {
             image_data: await this.encodeTextureToBase64(this.cameraTexture),
         };
         this.log("test");
-        
-        const { data, error } = await this.client.functions.invoke('hello-world', {
-            body: JSON.stringify(payload)
-        });
-        if (error) {
-            print("FAILED (error)");
+        try {
+            var { data, error } = await this.client.functions.invoke('hello-world', {
+                body: JSON.stringify(payload)
+            });
+            if (error) {
+                print(`FAILED (error: ${error})`);
+                return;
+            }
+        } catch (e) {
+            print("FAILED (error: " + JSON.stringify(e) + ")");
             return;
         }
-        let sum = data;
-        this.log(sum);
-        this.log("test2");
 
-        // this.isbusy = false
-        /*const payload = {
-            image_data: await this.encodeTextureToBase64(this.cameraTexture),
-        };
 
-        let request = new Request('http://10.223.60.197:8000/predict', {
-            method: 'POST',
-            body: JSON.stringify(payload),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
+        this.log("data: " + JSON.stringify(data));
 
-        try {
-            let response = await this.internetModule.fetch(request);
-            this.log("Response received from server");
-            if (response.status !== 200) {
-                print(`Failure: Server returned status code ${response.status}`);
-                try {
-                    const errorBody = await response.text();
-                    print(`Server Error Body: ${errorBody}`);
-                } catch (e) {
-                    print("Could not read error body.");
-                }
+        if (data.barcodes && data.barcodes.length > 0) {
+            for (const barcode of data.barcodes) {
+                const data = barcode.data;
+                const location = barcode.location;
+                const centerX = (location.top_left.x + location.top_right.x + location.bottom_right.x + location.bottom_left.x) / 4;
+                const centerY = (location.top_left.y + location.top_right.y + location.bottom_right.y + location.bottom_left.y) / 4;
+                print(`Barcode: ${data}, Average Position: ${centerX.toFixed(2)}, ${centerY.toFixed(2)}`);
+                this.scanBarcode(data);
+                this.isBusy = false;
                 return;
             }
-
-            let contentTypeHeader = response.headers.get('Content-Type');
-            if (!contentTypeHeader || !contentTypeHeader.includes('application/json')) {
-                print('Failure: wrong content type in response (expected application/json)');
-                print(`Received Content-Type: ${contentTypeHeader}`);
-                return;
-            }
-
-            let responseJson: any;
-            try {
-                responseJson = await response.json();
-            } catch (e) {
-                print(`Failure: Could not parse response as JSON. Error: ${e}`);
-                return;
-            }
-
-            if (responseJson.barcodes && responseJson.barcodes.length > 0) {
-                for (const barcode of responseJson.barcodes) {
-                    const data = barcode.data;
-                    const location = barcode.location;
-                    const centerX = (location.top_left.x + location.top_right.x + location.bottom_right.x + location.bottom_left.x) / 4;
-                    const centerY = (location.top_left.y + location.top_right.y + location.bottom_right.y + location.bottom_left.y) / 4;
-                    print(`Barcode: ${data}, Average Position: ${centerX.toFixed(2)}, ${centerY.toFixed(2)}`);
-                    //this.scanBarcode(data);
-                    this.isBusy = false;
-                }
-            }
-            print(`Full Response: ${JSON.stringify(responseJson, null, 2)}`);
-            this.isBusy = false;
-            }
-        catch (e) {
-            print(`Failure: Could not connect to server. Error: ${e.message}`);
         }
-        */
+        print(`No barcodes found in full Response: ${JSON.stringify(data, null, 2)}`);
+        this.isBusy = false;
     }
+    catch(e) {
+        print(`Failure: Could not connect to server. Error: ${e.message}`);
+    }
+
 
     /**
      * Encode texture to Base64 (async)
@@ -290,6 +252,6 @@ export class BarcodeScanner extends BaseScriptComponent {
         return this.logMessages.join('\n');
     }
 
-    
+
 }
 

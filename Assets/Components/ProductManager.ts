@@ -120,11 +120,19 @@ export class ProductManager extends BaseScriptComponent {
         this.client = createClient(supabaseProject.url, supabaseProject.publicToken);
 
         if (this.client) {
-            await this.signInUser();
+            try {
+                await this.signInUser();
+            } catch (error) {
+                this.log("Sign in error: " + JSON.stringify(error));
+            }
 
             // Initialize ProductService after client is ready
-            this.productService = new ProductService(this.client);
-            this.log("ProductManager initialized successfully");
+            try {
+                this.productService = new ProductService(this.client);
+                this.log("ProductManager initialized successfully");
+            } catch (error) {
+                this.log("ProductService error: " + JSON.stringify(error));
+            }
         }
     }
 
