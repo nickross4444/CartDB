@@ -3,6 +3,7 @@ import { createClient, SupabaseClient } from 'SupabaseClient.lspkg/supabase-snap
 import { ProductService } from '../Services/ProductService';
 import { Tables } from '../DatabaseTypes';
 import { RectangleButton } from 'SpectaclesUIKit.lspkg/Scripts/Components/Button/RectangleButton';
+import { PinchButton } from 'SpectaclesInteractionKit.lspkg/Components/UI/PinchButton/PinchButton';
 
 /**
  * ProductManager Component
@@ -51,12 +52,17 @@ export class ProductManager extends BaseScriptComponent {
     @input
     @allowUndefined
     @hint("Optional: Button to add current product to cart")
-    public addToCartButton: RectangleButton;
+    public addToCartButton: PinchButton;
 
     @input
     @allowUndefined
     @hint("Optional: Button to cancel/clear current product selection")
-    public cancelButton: RectangleButton;
+    public cancelButton: PinchButton;
+
+    @input
+    @allowUndefined
+    @hint("Optional: Component to enable on scan")
+    public infoPanel: Component;    //needs more implementation
 
     // Private state
     private client: SupabaseClient;
@@ -76,6 +82,9 @@ export class ProductManager extends BaseScriptComponent {
         this.createEvent("OnStartEvent").bind(() => {
             this.onStart();
         });
+        if (this.infoPanel) {
+            this.infoPanel.enabled = false;
+        }
     }
 
     /**
@@ -84,7 +93,7 @@ export class ProductManager extends BaseScriptComponent {
     private setupButtons() {
         // Add to Cart button
         if (this.addToCartButton) {
-            this.addToCartButton.onTriggerUp.add(async () => {
+            this.addToCartButton.onButtonPinched.add(async () => {
                 if (!this.currentProduct) {
                     this.log("No product selected - scan a barcode first");
                     return;
@@ -96,7 +105,7 @@ export class ProductManager extends BaseScriptComponent {
 
         // Cancel button
         if (this.cancelButton) {
-            this.cancelButton.onTriggerUp.add(() => {
+            this.cancelButton.onButtonPinched.add(() => {
                 this.log("Cancel button pressed!");
                 this.clearCurrentProduct();
             });
@@ -120,11 +129,19 @@ export class ProductManager extends BaseScriptComponent {
         this.client = createClient(supabaseProject.url, supabaseProject.publicToken);
 
         if (this.client) {
-            await this.signInUser();
+            try {
+                await this.signInUser();
+            } catch (error) {
+                this.log("Sign in error: " + JSON.stringify(error));
+            }
 
             // Initialize ProductService after client is ready
-            this.productService = new ProductService(this.client);
-            this.log("ProductManager initialized successfully");
+            try {
+                this.productService = new ProductService(this.client);
+                this.log("ProductManager initialized successfully");
+            } catch (error) {
+                this.log("ProductService error: " + JSON.stringify(error));
+            }
         }
     }
 

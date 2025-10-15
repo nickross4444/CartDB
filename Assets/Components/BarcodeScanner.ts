@@ -1,3 +1,4 @@
+import { SupabaseClient } from 'SupabaseClient.lspkg/supabase-snapcloud';
 import { ProductManager } from './ProductManager';
 import { RectangleButton } from 'SpectaclesUIKit.lspkg/Scripts/Components/Button/RectangleButton';
 
@@ -20,7 +21,6 @@ export class BarcodeScanner extends BaseScriptComponent {
     @hint("Hardcoded test barcode for testing (replace with real scanner later)")
     public testBarcode: string = "8901234567890";
 
-
     @input
     @hint("Enable auto-scan on start (for testing)")
     public autoScanOnStart: boolean = false;
@@ -32,12 +32,8 @@ export class BarcodeScanner extends BaseScriptComponent {
     private logMessages: string[] = [];
     private maxLogMessages: number = 10;
 
-    // SCANDIT
-    @input
-    @hint("With port eg. 0.0.0.0:8000")
-    scanditServer: string = "10.223.60.197:8000";
-    @input internetModule: InternetModule;
-    private isBusy: boolean = false;
+    private client: SupabaseClient | null = null;
+    private isBusy: boolean = true;
     private cameraModule: CameraModule = require('LensStudio:CameraModule');
     private cameraRequest: CameraModule.CameraRequest;
     private cameraTexture: Texture;
@@ -52,6 +48,9 @@ export class BarcodeScanner extends BaseScriptComponent {
     async onStart() {
         this.log("BarcodeScanner starting");
 
+        await this.initializeServices();
+
+        this.log("Serivces initialized");
         if (!this.productManager) {
             this.log("ERROR: ProductManager not assigned!");
             return;
@@ -60,7 +59,6 @@ export class BarcodeScanner extends BaseScriptComponent {
         if (this.autoScanOnStart) {
             this.log("Waiting for ProductManager to initialize...");
             await this.waitForProductManager();
-
             // Now that ProductManager is ready, start the delay timer
             this.log(`ProductManager ready! Auto-scan will trigger in ${this.autoScanDelay}s...`);
             this.scheduleAutoScan();
@@ -70,17 +68,54 @@ export class BarcodeScanner extends BaseScriptComponent {
     }
 
     /**
+     * Initialize services using shared client from ProductManager
+     */
+    private async initializeServices() {
+        if (!this.productManager) {
+            this.log("ERROR: ProductManager not assigned");
+            return;
+        }
+
+        // Wait for ProductManager to initialize
+        const maxAttempts = 50; // 5 seconds max wait
+        let attempts = 0;
+
+        while (!this.productManager.isInitialized() && attempts < maxAttempts) {
+            await this.delay(100); // Wait 100ms
+            attempts++;
+        }
+
+        if (!this.productManager.isInitialized()) {
+            this.log("ERROR: ProductManager failed to initialize");
+            return;
+        }
+
+        // Get shared client and services from ProductManager
+        this.client = this.productManager.getClient();
+    }
+
+    public startScanning() {
+        this.log("Starting scanning");
+        this.isBusy = false;
+    }
+
+
+    public stopScanning() {
+        this.log("Stopping scanning");
+        this.isBusy = true;
+    }
+
+    /**
      * Setup camera to send image to server (Scandit)
      */
-    private setupCameraScanner() {
+    private async setupCameraScanner() {
         this.log("Setting up camera scanner");
         this.cameraRequest = CameraModule.createCameraRequest();
         this.cameraRequest.cameraId = CameraModule.CameraId.Default_Color;
         this.cameraTexture = this.cameraModule.requestCamera(this.cameraRequest);
         this.cameraTextureProvider = this.cameraTexture.control as CameraTextureProvider;
         this.cameraTextureProvider.onNewFrame.add((cameraFrame) => {
-            if (this.isBusy) {
-                this.log("Received new frame but camera is busy");
+            if (this.isBusy && this.client != null) {
                 return;
             }
             this.isBusy = true;
@@ -89,60 +124,47 @@ export class BarcodeScanner extends BaseScriptComponent {
         });
     }
 
-    private async sendImageToServer(): Promise<string> {
+    private async sendImageToServer(): Promise<void> {
         const payload = {
             image_data: await this.encodeTextureToBase64(this.cameraTexture),
         };
-        let request = new Request(`http://${this.scanditServer}/predict`, {
-            method: 'POST',
-            body: JSON.stringify(payload),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-        let response = await this.internetModule.fetch(request);
-
-        if (response.status !== 200) {
-            print(`Failure: Server returned status code ${response.status}`);
-            try {
-                const errorBody = await response.text();
-                print(`Server Error Body: ${errorBody}`);
-            } catch (e) {
-                print("Could not read error body.");
-            }
-            return;
-        }
-
-        let contentTypeHeader = response.headers.get('Content-Type');
-        if (!contentTypeHeader || !contentTypeHeader.includes('application/json')) {
-            print('Failure: wrong content type in response (expected application/json)');
-            print(`Received Content-Type: ${contentTypeHeader}`);
-            return;
-        }
-
-        let responseJson: any;
         try {
-            responseJson = await response.json();
+            var { data, error } = await this.client.functions.invoke('hello-world', {
+                body: JSON.stringify(payload)
+            });
+            if (error) {
+                print(`FAILED (error: ${error})`);
+                this.isBusy = false;
+                return;
+            }
         } catch (e) {
-            print(`Failure: Could not parse response as JSON. Error: ${e.message}`);
+            print("FAILED (error: " + JSON.stringify(e) + ")");
+            this.isBusy = false;
             return;
         }
 
-        if (responseJson.barcodes && responseJson.barcodes.length > 0) {
-            for (const barcode of responseJson.barcodes) {
+
+        this.log("data: " + JSON.stringify(data));
+
+        if (data.barcodes && data.barcodes.length > 0) {
+            for (const barcode of data.barcodes) {
                 const data = barcode.data;
                 const location = barcode.location;
                 const centerX = (location.top_left.x + location.top_right.x + location.bottom_right.x + location.bottom_left.x) / 4;
                 const centerY = (location.top_left.y + location.top_right.y + location.bottom_right.y + location.bottom_left.y) / 4;
                 print(`Barcode: ${data}, Average Position: ${centerX.toFixed(2)}, ${centerY.toFixed(2)}`);
-                this.scanBarcode(data); // Trigger product lookup
-                this.isBusy = false;
+                this.scanBarcode(data);
+                this.isBusy = true;
                 return;
             }
         }
-        print(`Full Response: ${JSON.stringify(responseJson, null, 2)}`);
+        print(`No barcodes found in full Response: ${JSON.stringify(data, null, 2)}`);
         this.isBusy = false;
     }
+    catch(e) {
+        print(`Failure: Could not connect to server. Error: ${e.message}`);
+    }
+
 
     /**
      * Encode texture to Base64 (async)
@@ -241,5 +263,7 @@ export class BarcodeScanner extends BaseScriptComponent {
     public getLogMessages(): string {
         return this.logMessages.join('\n');
     }
+
+
 }
 

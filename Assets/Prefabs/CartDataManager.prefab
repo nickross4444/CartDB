@@ -72,8 +72,7 @@
   Enabled: true
   ScriptAsset: !<reference> 2f4a395f-1db1-4a8d-946c-53bb515263b5
   ScriptInputsDefault:
-    scanditServer: true
-    internetModule: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -82,8 +81,6 @@
       testBarcode: !<string> 0602652176517
       autoScanOnStart: true
       autoScanDelay: !<float> 1.000000
-      scanditServer: 10.223.60.197
-      internetModule: !<reference.InternetModule> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -110,6 +107,7 @@
   ScriptAsset: !<reference> 51b8b2f9-1963-41c6-9ba6-c0704ebab86f
   ScriptInputsDefault:
     nutritionScoreText: true
+    infoPanel: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -123,6 +121,7 @@
       cartManager: !<MappingBased.AssignableType_1> 1bf95c12-794b-43e6-b235-40b483d24127
       addToCartButton: !<MappingBased.AssignableType_2> c7739d65-3a78-42b9-a15b-ac7d064df15a
       cancelButton: !<MappingBased.AssignableType_3> 124c17a8-621c-49b2-bd5c-dbe4b6d91f46
+      infoPanel: !<reference.Component> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
