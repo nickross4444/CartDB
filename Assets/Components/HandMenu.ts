@@ -79,14 +79,14 @@ export class HandMenu extends BaseScriptComponent {
             }
             var directionNextToKnuckle = hand.handType == "left" ? hand.indexKnuckle.right : hand.indexKnuckle.right.mult(HandMenu.scalar3(-1));
 
-            this.preferencesButton.getTransform().setWorldRotation(this.camera.getTransform().getWorldRotation());
+            this.preferencesButton.getTransform().setWorldRotation(this.camera.getTransform().getWorldRotation());//.invert());
             this.preferencesButton.getTransform().setWorldPosition(hand.pinkyKnuckle.position.add(hand.wrist.forward.mult(new vec3(2.25,2.25,2.25))));
             
-            this.groceryButton.getTransform().setWorldRotation(this.camera.getTransform().getWorldRotation());
+            this.groceryButton.getTransform().setWorldRotation(this.camera.getTransform().getWorldRotation());//.invert());
             this.groceryButton.getTransform().setWorldPosition((hand.ringKnuckle.position.add(hand.middleKnuckle.position).mult(new vec3(0.5,0.5,0.5))).add(hand.wrist.forward.mult(new vec3(2.25,2.25,2.25))));
 
         
-             this.cartListButton.getTransform().setWorldRotation(this.camera.getTransform().getWorldRotation());
+             this.cartListButton.getTransform().setWorldRotation(this.camera.getTransform().getWorldRotation());//.invert());
             this.cartListButton.getTransform().setWorldPosition(hand.indexKnuckle.position.add(hand.wrist.forward.mult(new vec3(2.25,2.25,2.25))));
             return true;
         }
