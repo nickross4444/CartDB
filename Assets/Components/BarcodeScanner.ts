@@ -32,6 +32,17 @@ export class BarcodeScanner extends BaseScriptComponent {
     private logMessages: string[] = [];
     private maxLogMessages: number = 10;
 
+    // SCANDIT
+    @input
+    @hint("With port eg. 0.0.0.0:8000")
+    scanditServer: String = "10.223.60.197";
+    @input internetModule: InternetModule;
+    private isBusy: boolean = false;
+    private cameraModule: CameraModule = require('LensStudio:CameraModule');
+    private cameraRequest: CameraModule.CameraRequest;
+    private cameraTexture: Texture;
+    private cameraTextureProvider: CameraTextureProvider;
+
     onAwake() {
         this.createEvent("OnStartEvent").bind(() => {
             this.onStart();
@@ -54,6 +65,89 @@ export class BarcodeScanner extends BaseScriptComponent {
             this.log(`ProductManager ready! Auto-scan will trigger in ${this.autoScanDelay}s...`);
             this.scheduleAutoScan();
         }
+
+        this.setupCameraScanner();
+    }
+
+    /**
+     * Setup camera to send image to server (Scandit)
+     */
+    private setupCameraScanner() {
+        this.cameraRequest = CameraModule.createCameraRequest();
+        this.cameraRequest.cameraId = CameraModule.CameraId.Default_Color;
+        this.cameraTexture = this.cameraModule.requestCamera(this.cameraRequest);
+        this.cameraTextureProvider = this.cameraTexture.control as CameraTextureProvider;
+        this.cameraTextureProvider.onNewFrame.add((cameraFrame) => {
+            if (this.isBusy) {
+                return; 
+            }
+            this.isBusy = true;
+            this.sendImageToServer();
+        });
+    }
+
+    private async sendImageToServer(): Promise<String> {
+        const payload = {
+            image_data: await this.encodeTextureToBase64(this.cameraTexture),
+        };
+        let request = new Request(`http://${this.scanditServer}/predict`, {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        let response = await this.internetModule.fetch(request);
+
+        if (response.status !== 200) {
+            print(`Failure: Server returned status code ${response.status}`);
+            try {
+                const errorBody = await response.text();
+                print(`Server Error Body: ${errorBody}`);
+            } catch (e) {
+                print("Could not read error body.");
+            }
+            return;
+        }
+
+        let contentTypeHeader = response.headers.get('Content-Type');
+        if (!contentTypeHeader || !contentTypeHeader.includes('application/json')) {
+            print('Failure: wrong content type in response (expected application/json)');
+            print(`Received Content-Type: ${contentTypeHeader}`);
+            return;
+        }
+
+        let responseJson: any;
+        try {
+            responseJson = await response.json();
+        } catch (e) {
+            print(`Failure: Could not parse response as JSON. Error: ${e.message}`);
+            return;
+        }
+
+        if (responseJson.barcodes && responseJson.barcodes.length > 0) {
+            for (const barcode of responseJson.barcodes) {
+                const data = barcode.data;
+                const location = barcode.location;
+                const centerX = (location.top_left.x + location.top_right.x + location.bottom_right.x + location.bottom_left.x) / 4;
+                const centerY = (location.top_left.y + location.top_right.y + location.bottom_right.y + location.bottom_left.y) / 4;
+                print(`Barcode: ${data}, Average Position: ${centerX.toFixed(2)}, ${centerY.toFixed(2)}`);
+                this.scanBarcode(data); // Trigger product lookup
+                this.isBusy = false;
+                return;
+            }
+        }
+        //print(`Full Response: ${JSON.stringify(responseJson, null, 2)}`);
+        this.isBusy = false;
+    }
+
+    /**
+     * Encode texture to Base64 (async)
+     */
+    private async encodeTextureToBase64(texture: Texture): Promise<string> {
+        return new Promise<string>((resolve, reject) => {
+            Base64.encodeTextureAsync(texture, resolve, reject, CompressionQuality.MaximumQuality, EncodingType.Png);
+        });
     }
 
     /**
