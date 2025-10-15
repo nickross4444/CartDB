@@ -28,7 +28,6 @@
   ScriptInputsHidden:
     autoScanDelay: false
     autoScanOnStart: false
-    internetModule: false
     productManager: false
     scanditServer: false
     testBarcode: false
@@ -45,8 +44,7 @@
       testBarcode: !<string> 8901234567890
       autoScanOnStart: false
       autoScanDelay: !<float> 2.000000
-      scanditServer: 10.223.60.197
-      internetModule: !<reference.InternetModule> 00000000-0000-0000-0000-000000000000
+      scanditServer: "10.223.60.197:8000"
   ScriptTypes:
     -
       {}
@@ -56,4 +54,3 @@
     - '// @input bool autoScanOnStart {"hint":"Enable auto-scan on start (for testing)"}'
     - '// @input float autoScanDelay = 2 {"hint":"Delay before auto-scan (seconds)"}'
     - '// @input string scanditServer = "10.223.60.197:8000" {"hint":"With port eg. 0.0.0.0:8000"}'
-    - // @input Asset.InternetModule internetModule
