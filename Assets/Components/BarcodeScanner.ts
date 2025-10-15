@@ -35,7 +35,7 @@ export class BarcodeScanner extends BaseScriptComponent {
     // SCANDIT
     @input
     @hint("With port eg. 0.0.0.0:8000")
-    scanditServer: String = "10.223.60.197";
+    scanditServer: string = "10.223.60.197:8000";
     @input internetModule: InternetModule;
     private isBusy: boolean = false;
     private cameraModule: CameraModule = require('LensStudio:CameraModule');
@@ -50,7 +50,7 @@ export class BarcodeScanner extends BaseScriptComponent {
     }
 
     async onStart() {
-        this.log("BarcodeScanner ready");
+        this.log("BarcodeScanner starting");
 
         if (!this.productManager) {
             this.log("ERROR: ProductManager not assigned!");
@@ -73,20 +73,23 @@ export class BarcodeScanner extends BaseScriptComponent {
      * Setup camera to send image to server (Scandit)
      */
     private setupCameraScanner() {
+        this.log("Setting up camera scanner");
         this.cameraRequest = CameraModule.createCameraRequest();
         this.cameraRequest.cameraId = CameraModule.CameraId.Default_Color;
         this.cameraTexture = this.cameraModule.requestCamera(this.cameraRequest);
         this.cameraTextureProvider = this.cameraTexture.control as CameraTextureProvider;
         this.cameraTextureProvider.onNewFrame.add((cameraFrame) => {
             if (this.isBusy) {
-                return; 
+                this.log("Received new frame but camera is busy");
+                return;
             }
             this.isBusy = true;
+            this.log("Sending image to server");
             this.sendImageToServer();
         });
     }
 
-    private async sendImageToServer(): Promise<String> {
+    private async sendImageToServer(): Promise<string> {
         const payload = {
             image_data: await this.encodeTextureToBase64(this.cameraTexture),
         };
@@ -137,7 +140,7 @@ export class BarcodeScanner extends BaseScriptComponent {
                 return;
             }
         }
-        //print(`Full Response: ${JSON.stringify(responseJson, null, 2)}`);
+        print(`Full Response: ${JSON.stringify(responseJson, null, 2)}`);
         this.isBusy = false;
     }
 
