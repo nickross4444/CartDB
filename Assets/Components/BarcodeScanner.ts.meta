@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/22bce23f-938c-4bd7-8616-27a9c923a54f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2f4a395f-1db1-4a8d-946c-53bb515263b5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2f4a395f-1db1-4a8d-946c-53bb515263b5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ecc29a4e-ec8d-4f10-8da6-fd712fbd9987
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ecc29a4e-ec8d-4f10-8da6-fd712fbd9987>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 1ed84097-1364-4d0c-9139-96c4136a7139
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoScanDelay: false
+    autoScanOnStart: false
+    productManager: false
+    testBarcode: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - productManager: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      testBarcode: !<string> 8901234567890
+      autoScanOnStart: false
+      autoScanDelay: !<float> 2.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType productManager {"hint":"Reference to ProductManager to trigger product lookups"}'
+    - '// @input string testBarcode = "8901234567890" {"hint":"Hardcoded test barcode for testing (replace with real scanner later)"}'
+    - '// @input bool autoScanOnStart {"hint":"Enable auto-scan on start (for testing)"}'
+    - '// @input float autoScanDelay = 2 {"hint":"Delay before auto-scan (seconds)"}'
