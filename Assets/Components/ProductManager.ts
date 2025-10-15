@@ -61,8 +61,18 @@ export class ProductManager extends BaseScriptComponent {
 
     @input
     @allowUndefined
-    @hint("Optional: Component to enable on scan")
-    public infoPanel: Component;    //needs more implementation
+    @hint("Optional: Information panel to show when product is found")
+    public infoPanel: Component;
+
+    @input
+    @allowUndefined
+    @hint("Optional: Frame component for the info panel (to access close button)")
+    public infoPanelFrame: any; // Frame type from SpectaclesUIKit
+
+    @input
+    @allowUndefined
+    @hint("Optional: Reference to BarcodeScanner to control scanning state")
+    public barcodeScanner: any; // BarcodeScanner type
 
     // Private state
     private client: SupabaseClient;
@@ -79,6 +89,7 @@ export class ProductManager extends BaseScriptComponent {
 
     onAwake() {
         this.setupButtons();
+        this.setupInfoPanelFrame();
         this.createEvent("OnStartEvent").bind(() => {
             this.onStart();
         });
@@ -100,6 +111,12 @@ export class ProductManager extends BaseScriptComponent {
                 }
                 this.log("Add to cart button pressed!");
                 await this.addToCart(1);
+
+                // Close info panel and resume scanning
+                this.closeInfoPanel();
+                if (this.barcodeScanner && typeof this.barcodeScanner.resumeScanning === 'function') {
+                    this.barcodeScanner.resumeScanning();
+                }
             });
         }
 
@@ -108,6 +125,29 @@ export class ProductManager extends BaseScriptComponent {
             this.cancelButton.onButtonPinched.add(() => {
                 this.log("Cancel button pressed!");
                 this.clearCurrentProduct();
+
+                // Close info panel and resume scanning
+                this.closeInfoPanel();
+                if (this.barcodeScanner && typeof this.barcodeScanner.resumeScanning === 'function') {
+                    this.barcodeScanner.resumeScanning();
+                }
+            });
+        }
+    }
+
+    /**
+     * Setup Frame's close button to resume scanning
+     */
+    private setupInfoPanelFrame() {
+        if (this.infoPanelFrame && this.infoPanelFrame.closeButton) {
+            this.infoPanelFrame.closeButton.onButtonPinched.add(() => {
+                this.log("Info panel closed via Frame close button");
+                this.clearCurrentProduct();
+
+                // Resume scanning
+                if (this.barcodeScanner && typeof this.barcodeScanner.resumeScanning === 'function') {
+                    this.barcodeScanner.resumeScanning();
+                }
             });
         }
     }
@@ -181,6 +221,7 @@ export class ProductManager extends BaseScriptComponent {
         if (product) {
             this.currentProduct = product;
             this.displayProduct(product);
+            this.openInfoPanel();
             if (this.onProductFoundCallback) {
                 this.onProductFoundCallback();
             }
@@ -188,6 +229,7 @@ export class ProductManager extends BaseScriptComponent {
             this.log(`Product not found for barcode: ${barcode}`);
             this.currentProduct = null;
             this.displayNoData();
+            this.openInfoPanel(); // Still show panel to display "No data"
             if (this.onProductNotFoundCallback) {
                 this.onProductNotFoundCallback();
             }
@@ -211,6 +253,7 @@ export class ProductManager extends BaseScriptComponent {
         if (product) {
             this.currentProduct = product;
             this.displayProduct(product);
+            this.openInfoPanel();
             if (this.onProductFoundCallback) {
                 this.onProductFoundCallback();
             }
@@ -218,6 +261,7 @@ export class ProductManager extends BaseScriptComponent {
             this.log(`Product not found for ID: ${productId}`);
             this.currentProduct = null;
             this.displayNoData();
+            this.openInfoPanel();
             if (this.onProductNotFoundCallback) {
                 this.onProductNotFoundCallback();
             }
@@ -332,6 +376,26 @@ export class ProductManager extends BaseScriptComponent {
         this.log("Clearing current product selection");
         this.currentProduct = null;
         this.clearDisplay();
+    }
+
+    /**
+     * Open the information panel
+     */
+    public openInfoPanel() {
+        if (this.infoPanel) {
+            this.infoPanel.enabled = true;
+            this.log("Information panel opened");
+        }
+    }
+
+    /**
+     * Close the information panel
+     */
+    public closeInfoPanel() {
+        if (this.infoPanel) {
+            this.infoPanel.enabled = false;
+            this.log("Information panel closed");
+        }
     }
 
     /**
