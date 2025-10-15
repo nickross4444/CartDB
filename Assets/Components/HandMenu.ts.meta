@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/5d46401f-06fa-4663-843e-301483ba8fee>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a609fca6-5e0c-4aa0-aa8e-878c9b4d19c4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a609fca6-5e0c-4aa0-aa8e-878c9b4d19c4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1830d0cd-4a3c-48b1-9a8b-2543d06dee40
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1830d0cd-4a3c-48b1-9a8b-2543d06dee40>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9d8c57cd-0c49-47e3-bde2-167fda32d62b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cartListButton: false
+    distanceToHand: false
+    groceryButton: false
+    moneyTrackerObject: false
+    preferencesButton: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - distanceToHand: !<float> 5.000000
+      moneyTrackerObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      preferencesButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      groceryButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cartListButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float distanceToHand = 5
+    - // @input SceneObject moneyTrackerObject
+    - // @input SceneObject preferencesButton
+    - // @input SceneObject groceryButton
+    - // @input SceneObject cartListButton
