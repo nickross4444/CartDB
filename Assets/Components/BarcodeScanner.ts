@@ -32,8 +32,8 @@ export class BarcodeScanner extends BaseScriptComponent {
     private logMessages: string[] = [];
     private maxLogMessages: number = 10;
 
-    private client: SupabaseClient;
-    private isBusy: boolean = false;
+    private client: SupabaseClient | null = null;
+    private isBusy: boolean = true;
     private cameraModule: CameraModule = require('LensStudio:CameraModule');
     private cameraRequest: CameraModule.CameraRequest;
     private cameraTexture: Texture;
@@ -94,6 +94,17 @@ export class BarcodeScanner extends BaseScriptComponent {
         this.client = this.productManager.getClient();
     }
 
+    public startScanning() {
+        this.log("Starting scanning");
+        this.isBusy = false;
+    }
+
+
+    public stopScanning() {
+        this.log("Stopping scanning");
+        this.isBusy = true;
+    }
+
     /**
      * Setup camera to send image to server (Scandit)
      */
@@ -104,7 +115,7 @@ export class BarcodeScanner extends BaseScriptComponent {
         this.cameraTexture = this.cameraModule.requestCamera(this.cameraRequest);
         this.cameraTextureProvider = this.cameraTexture.control as CameraTextureProvider;
         this.cameraTextureProvider.onNewFrame.add((cameraFrame) => {
-            if (this.isBusy) {
+            if (this.isBusy && this.client != null) {
                 return;
             }
             this.isBusy = true;
@@ -117,17 +128,18 @@ export class BarcodeScanner extends BaseScriptComponent {
         const payload = {
             image_data: await this.encodeTextureToBase64(this.cameraTexture),
         };
-        this.log("test");
         try {
             var { data, error } = await this.client.functions.invoke('hello-world', {
                 body: JSON.stringify(payload)
             });
             if (error) {
                 print(`FAILED (error: ${error})`);
+                this.isBusy = false;
                 return;
             }
         } catch (e) {
             print("FAILED (error: " + JSON.stringify(e) + ")");
+            this.isBusy = false;
             return;
         }
 
@@ -142,7 +154,7 @@ export class BarcodeScanner extends BaseScriptComponent {
                 const centerY = (location.top_left.y + location.top_right.y + location.bottom_right.y + location.bottom_left.y) / 4;
                 print(`Barcode: ${data}, Average Position: ${centerX.toFixed(2)}, ${centerY.toFixed(2)}`);
                 this.scanBarcode(data);
-                this.isBusy = false;
+                this.isBusy = true;
                 return;
             }
         }
