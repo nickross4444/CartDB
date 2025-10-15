@@ -12,6 +12,8 @@
     - !<own> 280519a3-570c-4c95-a031-2c14addf3573
     - !<own> a9406dbe-7f8c-41bc-b0c1-545b36f0bedf
     - !<own> 19edb698-b6bb-4559-b418-e425a89d984b
+    - !<own> 1c2175f0-3538-4706-be62-97bea1bc1612
+    - !<own> 667697a4-b7cb-4d2d-8ddb-808947d5d770
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - |
@@ -956,6 +958,21 @@
     - !<own> 1017a8fd-9b43-4611-84e8-a3c4b1af4b8f
   Components:
     []
+- !<SceneObject/1c2175f0-3538-4706-be62-97bea1bc1612>
+  PrefabRemaps:
+    []
+  Name: HandMenu
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8d10d7ae-3320-4a3b-9b38-51f788f40873
 - !<SceneObject/1d315697-3a01-488c-94b2-8fb34d406c38>
   PrefabRemaps:
     []
@@ -2034,8 +2051,8 @@
   Enabled: true
   Layers: 2
   LocalTransform: !<TransformEntity>
-    Position: {x: -0.161844, y: 3.112000, z: 3.796569}
-    Rotation: {x: -90.000000, y: 0.000007, z: 0.000000}
+    Position: {x: -0.161844, y: 3.796569, z: -3.112000}
+    Rotation: {x: -180.000000, y: -0.000000, z: -0.000007}
     Scale: {x: 6.000001, y: 6.000001, z: 6.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -3037,8 +3054,8 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 4.136793, y: 13.115629, z: 4.548269}
-    Rotation: {x: -174.329529, y: 3.084865, z: 92.671478}
+    Position: {x: 12.645091, y: 4.203007, z: -5.679429}
+    Rotation: {x: 0.000024, y: -0.000002, z: -0.000009}
     Scale: {x: 1.400000, y: 1.866667, z: 0.933380}
     HasSegmentScaleCompensation: false
   Children:
@@ -3199,9 +3216,6 @@
     - !<own> 0604f275-d7ad-44a4-9c28-4b371fe54f71
     - !<own> 9a768792-cf49-4efd-b213-dc3bb0700ef4
     - !<own> 25a1d0d5-5217-4e30-9199-28ed721bb99a
-    - !<own> b42d9a73-a9ad-4c78-bb38-2ce916b26a03
-    - !<own> 71fc1afc-3409-4e83-8557-306275683871
-    - !<own> 4ac6dcf2-1cf5-4e86-9f68-e584f0d047e4
   Components:
     []
 - !<SceneObject/4f503a2d-2627-4580-96c8-78648ca21e4a>
@@ -4286,6 +4300,24 @@
     - !<own> 2b5869f1-486b-4afc-bea8-d5faa892c2cd
   Components:
     []
+- !<SceneObject/667697a4-b7cb-4d2d-8ddb-808947d5d770>
+  PrefabRemaps:
+    []
+  Name: Buttons
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b42d9a73-a9ad-4c78-bb38-2ce916b26a03
+    - !<own> 71fc1afc-3409-4e83-8557-306275683871
+    - !<own> 4ac6dcf2-1cf5-4e86-9f68-e584f0d047e4
+    - !<own> 32e377c5-6c64-419b-89ad-4a32aa9b29a3
+  Components:
+    []
 - !<SceneObject/66803a3c-dcab-4c98-b069-43da738a93c5>
   PrefabRemaps:
     []
@@ -4386,7 +4418,6 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 048fe76e-4929-4817-b7b1-5f95aca0da0b
-    - !<own> 32e377c5-6c64-419b-89ad-4a32aa9b29a3
   Components:
     []
 - !<SceneObject/6de2eaef-608f-4d3d-b005-df3a8691e25b>
@@ -4607,8 +4638,8 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.025662, y: 12.966743, z: 4.882747}
-    Rotation: {x: -174.329529, y: 3.084865, z: 92.671478}
+    Position: {x: 12.669922, y: 0.076305, z: -5.607635}
+    Rotation: {x: 0.000024, y: -0.000002, z: -0.000009}
     Scale: {x: 1.400000, y: 1.866667, z: 0.933380}
     HasSegmentScaleCompensation: false
   Children:
@@ -6475,6 +6506,26 @@
     []
   Components:
     - !<own> c84ea4bf-12a7-4606-949a-7161c6a9ac9a
+- !<ScriptComponent/8d10d7ae-3320-4a3b-9b38-51f788f40873>
+  PrefabRemaps:
+    []
+  Name: HandMenu
+  Enabled: true
+  ScriptAsset: !<reference> a609fca6-5e0c-4aa0-aa8e-878c9b4d19c4
+  ScriptInputsDefault:
+    distanceToHand: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      distanceToHand: !<float> 5.000000
+      moneyTrackerObject: !<reference.SceneObject> 32e377c5-6c64-419b-89ad-4a32aa9b29a3
+      preferencesButton: !<reference.SceneObject> b42d9a73-a9ad-4c78-bb38-2ce916b26a03
+      groceryButton: !<reference.SceneObject> 71fc1afc-3409-4e83-8557-306275683871
+      cartListButton: !<reference.SceneObject> 4ac6dcf2-1cf5-4e86-9f68-e584f0d047e4
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/8d9565d6-7e4b-49af-ba87-48de32d2d473>
   PrefabRemaps:
     []
@@ -8142,8 +8193,8 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -4.162910, y: 12.863727, z: 5.278067}
-    Rotation: {x: -174.329529, y: 3.084865, z: 92.671478}
+    Position: {x: 12.740834, y: -4.131514, z: -5.591511}
+    Rotation: {x: 0.000024, y: -0.000002, z: -0.000009}
     Scale: {x: 1.400000, y: 1.866667, z: 0.933380}
     HasSegmentScaleCompensation: false
   Children:
