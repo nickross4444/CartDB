@@ -29,8 +29,14 @@ export class BarcodeScanner extends BaseScriptComponent {
     @hint("Delay before auto-scan (seconds)")
     public autoScanDelay: number = 2.0;
 
+    @input
+    @allowUndefined
+    @hint("Optional: Cart panel to show when scanning starts")
+    public cartPanel: Component;
+
     private logMessages: string[] = [];
     private maxLogMessages: number = 10;
+    private isScanning: boolean = false;
 
     private client: SupabaseClient | null = null;
     private isBusy: boolean = true;
@@ -97,12 +103,29 @@ export class BarcodeScanner extends BaseScriptComponent {
     public startScanning() {
         this.log("Starting scanning");
         this.isBusy = false;
+        this.isScanning = true;
+
+        // Show cart panel when scanning starts
+        if (this.cartPanel) {
+            this.cartPanel.enabled = true;
+        }
     }
 
 
     public stopScanning() {
         this.log("Stopping scanning");
         this.isBusy = true;
+        this.isScanning = true;
+    }
+
+    public resumeScanning() {
+        this.log("Resuming scanning");
+        this.isBusy = false;
+        this.isScanning = true;
+    }
+
+    public getIsScanning(): boolean {
+        return this.isScanning;
     }
 
     /**
@@ -231,6 +254,9 @@ export class BarcodeScanner extends BaseScriptComponent {
         }
 
         this.log(`📷 Scanning barcode: ${barcode}`);
+
+        // Stop scanning when barcode is found
+        this.stopScanning();
 
         // Pass barcode to ProductManager
         this.productManager.lookupProduct(barcode);

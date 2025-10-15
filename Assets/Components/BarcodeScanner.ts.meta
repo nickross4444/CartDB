@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     autoScanDelay: false
     autoScanOnStart: false
+    cartPanel: false
     productManager: false
     testBarcode: false
   ScriptTypesHidden:
@@ -43,6 +44,7 @@
       testBarcode: !<string> 8901234567890
       autoScanOnStart: false
       autoScanDelay: !<float> 2.000000
+      cartPanel: !<reference.Component> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -51,3 +53,4 @@
     - '// @input string testBarcode = "8901234567890" {"hint":"Hardcoded test barcode for testing (replace with real scanner later)"}'
     - '// @input bool autoScanOnStart {"hint":"Enable auto-scan on start (for testing)"}'
     - '// @input float autoScanDelay = 2 {"hint":"Delay before auto-scan (seconds)"}'
+    - '// @input Component.Component cartPanel {"hint":"Optional: Cart panel to show when scanning starts"}'

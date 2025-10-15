@@ -56,13 +56,18 @@ export class ProductManager extends BaseScriptComponent {
 
     @input
     @allowUndefined
-    @hint("Optional: Button to cancel/clear current product selection")
-    public cancelButton: PinchButton;
+    @hint("Optional: Information panel to show when product is found")
+    public infoPanel: Component;
 
     @input
     @allowUndefined
-    @hint("Optional: Component to enable on scan")
-    public infoPanel: Component;    //needs more implementation
+    @hint("Optional: Frame component for the info panel (to access close button)")
+    public infoPanelFrame: any; // Frame type from SpectaclesUIKit
+
+    @input
+    @allowUndefined
+    @hint("Optional: Reference to BarcodeScanner to control scanning state")
+    public barcodeScanner: any; // BarcodeScanner type
 
     // Private state
     private client: SupabaseClient;
@@ -78,13 +83,23 @@ export class ProductManager extends BaseScriptComponent {
     public onAddToCartRequestedCallback: ((productId: number, quantity: number) => void) | null = null;
 
     onAwake() {
+        this.log("ProductManager onAwake() called");
         this.setupButtons();
         this.createEvent("OnStartEvent").bind(() => {
+            this.log("OnStartEvent triggered, calling onStart()");
             this.onStart();
         });
+
+        // Hide info panel at start, but delay slightly to let Frame initialize
         if (this.infoPanel) {
-            this.infoPanel.enabled = false;
+            const sceneObject = this.infoPanel.getSceneObject();
+            if (sceneObject) {
+                sceneObject.enabled = false;
+                this.log("Info panel SceneObject disabled at start");
+            }
         }
+
+        this.log("ProductManager onAwake() complete");
     }
 
     /**
@@ -100,66 +115,161 @@ export class ProductManager extends BaseScriptComponent {
                 }
                 this.log("Add to cart button pressed!");
                 await this.addToCart(1);
-            });
-        }
 
-        // Cancel button
-        if (this.cancelButton) {
-            this.cancelButton.onButtonPinched.add(() => {
-                this.log("Cancel button pressed!");
-                this.clearCurrentProduct();
+                // Close info panel and resume scanning
+                this.closeInfoPanel();
+                if (this.barcodeScanner && typeof this.barcodeScanner.resumeScanning === 'function') {
+                    this.barcodeScanner.resumeScanning();
+                }
             });
         }
     }
 
+    /**
+     * Setup Frame's close button to resume scanning
+     */
+    private setupInfoPanelFrame() {
+        this.log("setupInfoPanelFrame() called");
+
+        if (!this.infoPanelFrame) {
+            this.log("Info panel Frame not assigned - close button won't resume scanning");
+            return;
+        }
+
+        try {
+            // Check if Frame has initialized and has closeButton
+            const closeButton = this.infoPanelFrame.closeButton;
+
+            if (closeButton) {
+                closeButton.onButtonPinched.add(() => {
+                    this.log("Info panel closed via Frame close button");
+                    this.clearCurrentProduct();
+
+                    // Resume scanning
+                    if (this.barcodeScanner && typeof this.barcodeScanner.resumeScanning === 'function') {
+                        this.barcodeScanner.resumeScanning();
+                    }
+                });
+                this.log("Frame close button connected successfully");
+            } else {
+                this.log("Frame close button not available - make sure showCloseButton is enabled on Frame");
+            }
+        } catch (error) {
+            this.log(`Frame close button setup failed: ${error}. This is OK if Frame hasn't initialized yet.`);
+        }
+    }
+
     async onStart() {
-        await this.initSupabase();
+        try {
+            this.log("ProductManager onStart() called");
+
+            // Setup Frame close button after everything is initialized
+            this.setupInfoPanelFrame();
+
+            this.log("Starting Supabase initialization...");
+            await this.initSupabase();
+
+            this.log(`ProductManager onStart() complete - isInitialized: ${this.isInitialized()}`);
+        } catch (error) {
+            this.log(`ERROR in onStart(): ${error}`);
+            this.log(`Error details: ${JSON.stringify(error)}`);
+            // Ensure initialization flag is set even on error
+            if (this.uid === undefined) {
+                this.uid = "";
+            }
+        }
     }
 
     /**
      * Initialize Supabase client and authenticate user
      */
     async initSupabase() {
-        if (!this.snapCloudRequirements || !this.snapCloudRequirements.isConfigured()) {
-            this.log("SnapCloudRequirements not configured");
+        this.log("initSupabase() starting...");
+
+        if (!this.snapCloudRequirements) {
+            this.log("ERROR: snapCloudRequirements is null/undefined");
+            this.uid = "";
             return;
         }
 
+        if (!this.snapCloudRequirements.isConfigured()) {
+            this.log("ERROR: SnapCloudRequirements not configured");
+            this.uid = "";
+            return;
+        }
+
+        this.log("Getting Supabase project configuration...");
         const supabaseProject = this.snapCloudRequirements.getSupabaseProject();
+
+        this.log(`Creating Supabase client with URL: ${supabaseProject.url}`);
         this.client = createClient(supabaseProject.url, supabaseProject.publicToken);
 
         if (this.client) {
+            this.log("Supabase client created successfully");
+
             try {
+                this.log("Attempting to sign in user...");
                 await this.signInUser();
             } catch (error) {
                 this.log("Sign in error: " + JSON.stringify(error));
+                // Set uid to empty string if sign-in fails
+                if (!this.uid) {
+                    this.uid = "";
+                }
             }
 
             // Initialize ProductService after client is ready
             try {
+                this.log("Creating ProductService...");
                 this.productService = new ProductService(this.client);
                 this.log("ProductManager initialized successfully");
             } catch (error) {
                 this.log("ProductService error: " + JSON.stringify(error));
             }
+        } else {
+            this.log("ERROR: Failed to create Supabase client");
+            // Set uid to empty string if client creation fails
+            this.uid = "";
         }
+
+        this.log(`initSupabase() complete - client: ${!!this.client}, productService: ${!!this.productService}, uid: ${this.uid !== undefined ? (this.uid || "empty") : "undefined"}`);
     }
 
     /**
      * Authenticate user with Snap Cloud
      */
     async signInUser() {
-        const { data, error } = await this.client.auth.signInWithIdToken({
-            provider: 'snapchat',
-            token: ''
-        });
+        try {
+            this.log("Calling signInWithIdToken...");
 
-        if (error) {
-            this.log("Sign in error: " + JSON.stringify(error));
-        } else {
-            const { user } = data;
-            this.uid = JSON.stringify(user.id);
-            this.log("User authenticated");
+            // Create a timeout promise
+            const timeoutPromise = new Promise((_, reject) => {
+                const delayedEvent = this.createEvent("DelayedCallbackEvent") as DelayedCallbackEvent;
+                delayedEvent.bind(() => reject(new Error("Sign-in timeout after 5 seconds")));
+                delayedEvent.reset(5);
+            });
+
+            // Race between sign-in and timeout
+            const signInPromise = this.client.auth.signInWithIdToken({
+                provider: 'snapchat',
+                token: ''
+            });
+
+            const result = await Promise.race([signInPromise, timeoutPromise]) as any;
+
+            if (result.error) {
+                this.log("Sign in error: " + JSON.stringify(result.error));
+                this.uid = ""; // Set empty to allow initialization to continue
+            } else if (result.data && result.data.user) {
+                this.uid = JSON.stringify(result.data.user.id);
+                this.log("User authenticated successfully");
+            } else {
+                this.log("Sign in returned unexpected result");
+                this.uid = ""; // Set empty to allow initialization to continue
+            }
+        } catch (error) {
+            this.log(`Sign in exception: ${error}`);
+            this.uid = ""; // Set empty to allow initialization to continue
         }
     }
 
@@ -181,6 +291,7 @@ export class ProductManager extends BaseScriptComponent {
         if (product) {
             this.currentProduct = product;
             this.displayProduct(product);
+            this.openInfoPanel();
             if (this.onProductFoundCallback) {
                 this.onProductFoundCallback();
             }
@@ -188,6 +299,7 @@ export class ProductManager extends BaseScriptComponent {
             this.log(`Product not found for barcode: ${barcode}`);
             this.currentProduct = null;
             this.displayNoData();
+            this.openInfoPanel(); // Still show panel to display "No data"
             if (this.onProductNotFoundCallback) {
                 this.onProductNotFoundCallback();
             }
@@ -211,6 +323,7 @@ export class ProductManager extends BaseScriptComponent {
         if (product) {
             this.currentProduct = product;
             this.displayProduct(product);
+            this.openInfoPanel();
             if (this.onProductFoundCallback) {
                 this.onProductFoundCallback();
             }
@@ -218,6 +331,7 @@ export class ProductManager extends BaseScriptComponent {
             this.log(`Product not found for ID: ${productId}`);
             this.currentProduct = null;
             this.displayNoData();
+            this.openInfoPanel();
             if (this.onProductNotFoundCallback) {
                 this.onProductNotFoundCallback();
             }
@@ -335,6 +449,72 @@ export class ProductManager extends BaseScriptComponent {
     }
 
     /**
+     * Open the information panel
+     */
+    public openInfoPanel() {
+        if (!this.infoPanel) {
+            this.log("WARNING: infoPanel not assigned - cannot open");
+            return;
+        }
+
+        // Get the root SceneObject - go up the hierarchy to find the top-level panel object
+        let sceneObject = this.infoPanel.getSceneObject();
+
+        // Enable the SceneObject (this will enable all children automatically)
+        if (sceneObject) {
+            sceneObject.enabled = true;
+            this.log(`Info panel SceneObject '${sceneObject.name}' enabled`);
+        }
+
+        // Enable the component
+        this.infoPanel.enabled = true;
+
+        // If there's a Frame, show it
+        if (this.infoPanelFrame && typeof this.infoPanelFrame.showVisual === 'function') {
+            try {
+                this.infoPanelFrame.showVisual();
+                this.log("Frame showVisual() called");
+            } catch (error) {
+                this.log(`Frame showVisual() failed: ${error}`);
+            }
+        }
+
+        this.log("Information panel opened");
+    }
+
+    /**
+     * Close the information panel
+     */
+    public closeInfoPanel() {
+        if (!this.infoPanel) {
+            return;
+        }
+
+        // If there's a Frame, hide it first
+        if (this.infoPanelFrame && typeof this.infoPanelFrame.hideVisual === 'function') {
+            try {
+                this.infoPanelFrame.hideVisual();
+                this.log("Frame hideVisual() called");
+            } catch (error) {
+                this.log(`Frame hideVisual() failed: ${error}`);
+            }
+        }
+
+        // Get the SceneObject
+        let sceneObject = this.infoPanel.getSceneObject();
+
+        // Disable the SceneObject (this will disable all children automatically)
+        if (sceneObject) {
+            sceneObject.enabled = false;
+            this.log(`Info panel SceneObject '${sceneObject.name}' disabled (children disabled too)`);
+        }
+
+        // Disable the component
+        this.infoPanel.enabled = false;
+        this.log("Information panel closed");
+    }
+
+    /**
      * Request to add current product to cart
      * This will notify CartManager via callback or directly call it if connected
      */
@@ -387,9 +567,14 @@ export class ProductManager extends BaseScriptComponent {
 
     /**
      * Check if ProductManager is fully initialized
+     * Returns true even if uid is empty string (anonymous mode)
      */
     public isInitialized(): boolean {
-        return this.client !== undefined && this.productService !== undefined && this.uid !== undefined;
+        const initialized = this.client !== undefined && this.productService !== undefined && this.uid !== undefined;
+        if (!initialized) {
+            this.log(`Initialization status - client: ${!!this.client}, productService: ${!!this.productService}, uid: ${this.uid !== undefined}`);
+        }
+        return initialized;
     }
 
     /**

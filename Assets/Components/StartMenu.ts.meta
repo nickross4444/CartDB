@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/bb42f592-581b-4cbc-ac78-239a031d171f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5478f29c-ece7-4019-9085-a1745ba7b476
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5478f29c-ece7-4019-9085-a1745ba7b476
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b891a0d8-1471-4a6f-a03e-39e0a418295e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b891a0d8-1471-4a6f-a03e-39e0a418295e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 450f2099-a176-4bd9-a7a9-abce109cc083
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    barcodeScanner: false
+    everythingButton: false
+    letsShopButton: false
+    productManager: false
+    selectedPreferenceText: false
+    startMenuPanel: false
+    veganButton: false
+    vegetarianButton: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - barcodeScanner: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      productManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      vegetarianButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      veganButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      everythingButton: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      letsShopButton: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      selectedPreferenceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      startMenuPanel: !<reference.Component> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType barcodeScanner {"hint":"Reference to BarcodeScanner to start scanning"}'
+    - '// @input AssignableType_1 productManager {"hint":"Reference to ProductManager"}'
+    - '// @input AssignableType_2 vegetarianButton {"hint":"Button to select Vegetarian preference"}'
+    - '// @input AssignableType_3 veganButton {"hint":"Button to select Vegan preference"}'
+    - '// @input AssignableType_4 everythingButton {"hint":"Button to select Everything (no dietary restriction)"}'
+    - '// @input AssignableType_5 letsShopButton {"hint":"Button to start shopping (begins scanning)"}'
+    - '// @input Component.Text selectedPreferenceText {"hint":"Optional: Text to display selected dietary preference"}'
+    - '// @input Component.Component startMenuPanel {"hint":"Optional: Component to disable when shopping starts (the start menu itself)"}'
