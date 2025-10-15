@@ -499,19 +499,7 @@
     Pinch: 0.000000
 - !<SceneObject/0d030ae7-eff9-423d-84dd-d4b6567e6eaa>
   PrefabRemaps:
-    - 0d030ae7-eff9-423d-84dd-d4b6567e6eaa: ec925cb6-650d-416a-7cfe-c4043db0d4b3
-    - 21e01191-bd2e-4852-bcff-a9eec7ee3230: 3cb19946-48da-4747-70ad-904e1c1ecd50
-    - 34c4bcef-723a-4699-ae61-86dbd0d520c0: 27828ed3-f8ec-4227-4fbb-86df4b140979
-    - 4dbfa42a-20db-4093-935c-7871aa835b84: c6e76c8c-d403-40ed-59e4-06c4bea48434
-    - 5bc76be1-9318-47ff-994c-f3483e429159: 2289c9de-45c7-474e-6a34-215af7713c9d
-    - 63410302-1b34-4a5c-8c17-c9b7d71aa800: 1f74d2fd-9cdd-4f5a-4d6f-50bee7bb49f5
-    - 7b441b04-1a72-4aac-933b-955ac8556ba2: 3d9000b4-af58-41f8-63f9-ee9e552ed1a0
-    - 8504fc8c-90de-481b-8b32-3985d86d7a29: 5c0cfef7-c286-4ced-4ba3-8ab33970463c
-    - 96c70418-1e90-4dd6-8f42-7d8163bd0298: 80fa9feb-9434-4224-7bc9-b405e4a5bde6
-    - aebd1c37-3d31-4518-9ccb-68a0912a9779: 070b3a71-5026-4c5a-451c-e86d3de956a4
-    - ce348f07-55eb-4af1-8d3a-c0cbcee84dde: 30c61678-07c8-4e1f-5c63-f33637fda7cb
-    - d977f912-b975-44cd-86b4-b85b9cda927c: f976fad9-7f37-4cc5-78e7-25227a351ce3
-    - db29040b-9a06-4fe7-89cb-fbc6f36822e6: 7eac1d1f-7647-4ebe-6de7-321b761abbf7
+    []
   Name: shopping_cart
   Enabled: true
   Layers: 1
@@ -741,19 +729,7 @@
     - !<own> bc8eb126-0ab2-4ed5-96c5-143af071613e
 - !<SceneObject/14a4fe9f-eeae-442e-a78f-d34ad958a9fa>
   PrefabRemaps:
-    - 14a4fe9f-eeae-442e-a78f-d34ad958a9fa: ec925cb6-650d-416a-7cfe-c4043db0d4b3
-    - 1916cffc-9801-403c-9b01-b105ca759e9c: 1f74d2fd-9cdd-4f5a-4d6f-50bee7bb49f5
-    - 2bd7de86-d63b-4662-8213-cba3fe545dba: 27828ed3-f8ec-4227-4fbb-86df4b140979
-    - 934cb2da-e8b4-4690-b455-75483a214e7f: 2289c9de-45c7-474e-6a34-215af7713c9d
-    - 940d3f44-361f-4c08-a997-5b0dcd1cdc1f: f976fad9-7f37-4cc5-78e7-25227a351ce3
-    - a353d31d-56d1-464d-b6ac-d31a4891df83: 30c61678-07c8-4e1f-5c63-f33637fda7cb
-    - bc39145b-9e9e-4354-9cd3-48a1b47ac6a1: c6e76c8c-d403-40ed-59e4-06c4bea48434
-    - bea50fd3-c90d-48dc-916d-811c384c69cf: 3cb19946-48da-4747-70ad-904e1c1ecd50
-    - bf80c9bd-b5ed-479f-abaa-546ec9b4c6d2: 80fa9feb-9434-4224-7bc9-b405e4a5bde6
-    - c5591aa0-cc3b-42ec-9727-125c478d085a: 7eac1d1f-7647-4ebe-6de7-321b761abbf7
-    - c597e8b5-b738-4715-93d4-6f94a8602e41: 070b3a71-5026-4c5a-451c-e86d3de956a4
-    - cadb30b6-2e9a-4205-a7f1-e95ddeb0947e: 5c0cfef7-c286-4ced-4ba3-8ab33970463c
-    - dd3610b4-22e4-4160-8062-92eff0e7f7c8: 3d9000b4-af58-41f8-63f9-ee9e552ed1a0
+    []
   Name: shopping_cart
   Enabled: true
   Layers: 2
