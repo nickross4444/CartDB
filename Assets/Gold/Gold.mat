@@ -219,7 +219,7 @@
       value: 0
     baseColor:
       typeIdx: 5
-      value: {x: 0.615686, y: 0.760784, z: 0.792157, w: 1.000000}
+      value: {x: 0.792157, y: 0.792157, z: 0.792157, w: 1.000000}
     materialParamsTex:
       typeIdx: 9
       value:
