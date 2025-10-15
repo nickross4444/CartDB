@@ -294,6 +294,7 @@
       testBarcode: !<string> 0602652176517
       autoScanOnStart: false
       autoScanDelay: !<float> 5.000000
+      cartPanel: !<reference.Component> a7456b25-4a1b-4fe9-af0a-05393457e3e1
   ScriptTypes:
     "":
       {}
@@ -8805,8 +8806,9 @@
       logText: !<reference.Text> 6edda3c5-6ecc-4921-99b6-c1bc2e4a0486
       cartManager: !<MappingBased.AssignableType_1> e926c9c1-f421-4cdc-8ca9-bf312ebda077
       addToCartButton: !<MappingBased.AssignableType_2> 004382c5-c247-48ba-a879-1a3078c5c064
-      cancelButton: !<MappingBased.AssignableType_3> 124c17a8-621c-49b2-bd5c-dbe4b6d91f46
       infoPanel: !<reference.Component> 09bc4b70-9131-4e39-b3c3-279b42323efe
+      infoPanelFrame: !<MappingBased.AssignableType_3> 09bc4b70-9131-4e39-b3c3-279b42323efe
+      barcodeScanner: !<MappingBased.AssignableType_4> 0635a7e1-1a64-4fe2-a53c-3e724dca79a9
   ScriptTypes:
     "":
       {}

@@ -28,7 +28,6 @@
   ScriptInputsHidden:
     addToCartButton: false
     barcodeScanner: false
-    cancelButton: false
     cartManager: false
     infoPanel: false
     infoPanelFrame: false
@@ -55,10 +54,9 @@
       logText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       cartManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       addToCartButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
-      cancelButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
       infoPanel: !<reference.Component> 00000000-0000-0000-0000-000000000000
-      infoPanelFrame: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
-      barcodeScanner: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      infoPanelFrame: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      barcodeScanner: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -71,7 +69,6 @@
     - '// @input Component.Text logText {"hint":"Optional: Text component to display logs on device"}'
     - '// @input AssignableType_1 cartManager {"hint":"Optional: CartManager reference for automatic add-to-cart integration"}'
     - '// @input AssignableType_2 addToCartButton {"hint":"Optional: Button to add current product to cart"}'
-    - '// @input AssignableType_3 cancelButton {"hint":"Optional: Button to cancel/clear current product selection"}'
     - '// @input Component.Component infoPanel {"hint":"Optional: Information panel to show when product is found"}'
-    - '// @input AssignableType_4 infoPanelFrame {"hint":"Optional: Frame component for the info panel (to access close button)"}'
-    - '// @input AssignableType_5 barcodeScanner {"hint":"Optional: Reference to BarcodeScanner to control scanning state"}'
+    - '// @input AssignableType_3 infoPanelFrame {"hint":"Optional: Frame component for the info panel (to access close button)"}'
+    - '// @input AssignableType_4 barcodeScanner {"hint":"Optional: Reference to BarcodeScanner to control scanning state"}'

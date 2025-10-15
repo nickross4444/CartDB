@@ -56,11 +56,6 @@ export class ProductManager extends BaseScriptComponent {
 
     @input
     @allowUndefined
-    @hint("Optional: Button to cancel/clear current product selection")
-    public cancelButton: PinchButton;
-
-    @input
-    @allowUndefined
     @hint("Optional: Information panel to show when product is found")
     public infoPanel: Component;
 
@@ -88,14 +83,16 @@ export class ProductManager extends BaseScriptComponent {
     public onAddToCartRequestedCallback: ((productId: number, quantity: number) => void) | null = null;
 
     onAwake() {
+        this.log("ProductManager onAwake() called");
         this.setupButtons();
-        this.setupInfoPanelFrame();
         this.createEvent("OnStartEvent").bind(() => {
+            this.log("OnStartEvent triggered, calling onStart()");
             this.onStart();
         });
         if (this.infoPanel) {
             this.infoPanel.enabled = false;
         }
+        this.log("ProductManager onAwake() complete");
     }
 
     /**
@@ -119,70 +116,116 @@ export class ProductManager extends BaseScriptComponent {
                 }
             });
         }
-
-        // Cancel button
-        if (this.cancelButton) {
-            this.cancelButton.onButtonPinched.add(() => {
-                this.log("Cancel button pressed!");
-                this.clearCurrentProduct();
-
-                // Close info panel and resume scanning
-                this.closeInfoPanel();
-                if (this.barcodeScanner && typeof this.barcodeScanner.resumeScanning === 'function') {
-                    this.barcodeScanner.resumeScanning();
-                }
-            });
-        }
     }
 
     /**
      * Setup Frame's close button to resume scanning
      */
     private setupInfoPanelFrame() {
-        if (this.infoPanelFrame && this.infoPanelFrame.closeButton) {
-            this.infoPanelFrame.closeButton.onButtonPinched.add(() => {
-                this.log("Info panel closed via Frame close button");
-                this.clearCurrentProduct();
+        this.log("setupInfoPanelFrame() called");
 
-                // Resume scanning
-                if (this.barcodeScanner && typeof this.barcodeScanner.resumeScanning === 'function') {
-                    this.barcodeScanner.resumeScanning();
-                }
-            });
+        if (!this.infoPanelFrame) {
+            this.log("Info panel Frame not assigned - close button won't resume scanning");
+            return;
+        }
+
+        try {
+            // Check if Frame has initialized and has closeButton
+            const closeButton = this.infoPanelFrame.closeButton;
+
+            if (closeButton) {
+                closeButton.onButtonPinched.add(() => {
+                    this.log("Info panel closed via Frame close button");
+                    this.clearCurrentProduct();
+
+                    // Resume scanning
+                    if (this.barcodeScanner && typeof this.barcodeScanner.resumeScanning === 'function') {
+                        this.barcodeScanner.resumeScanning();
+                    }
+                });
+                this.log("Frame close button connected successfully");
+            } else {
+                this.log("Frame close button not available - make sure showCloseButton is enabled on Frame");
+            }
+        } catch (error) {
+            this.log(`Frame close button setup failed: ${error}. This is OK if Frame hasn't initialized yet.`);
         }
     }
 
     async onStart() {
-        await this.initSupabase();
+        try {
+            this.log("ProductManager onStart() called");
+
+            // Setup Frame close button after everything is initialized
+            this.setupInfoPanelFrame();
+
+            this.log("Starting Supabase initialization...");
+            await this.initSupabase();
+
+            this.log(`ProductManager onStart() complete - isInitialized: ${this.isInitialized()}`);
+        } catch (error) {
+            this.log(`ERROR in onStart(): ${error}`);
+            this.log(`Error details: ${JSON.stringify(error)}`);
+            // Ensure initialization flag is set even on error
+            if (this.uid === undefined) {
+                this.uid = "";
+            }
+        }
     }
 
     /**
      * Initialize Supabase client and authenticate user
      */
     async initSupabase() {
-        if (!this.snapCloudRequirements || !this.snapCloudRequirements.isConfigured()) {
-            this.log("SnapCloudRequirements not configured");
+        this.log("initSupabase() starting...");
+
+        if (!this.snapCloudRequirements) {
+            this.log("ERROR: snapCloudRequirements is null/undefined");
+            this.uid = "";
             return;
         }
 
+        if (!this.snapCloudRequirements.isConfigured()) {
+            this.log("ERROR: SnapCloudRequirements not configured");
+            this.uid = "";
+            return;
+        }
+
+        this.log("Getting Supabase project configuration...");
         const supabaseProject = this.snapCloudRequirements.getSupabaseProject();
+
+        this.log(`Creating Supabase client with URL: ${supabaseProject.url}`);
         this.client = createClient(supabaseProject.url, supabaseProject.publicToken);
 
         if (this.client) {
+            this.log("Supabase client created successfully");
+
             try {
+                this.log("Attempting to sign in user...");
                 await this.signInUser();
             } catch (error) {
                 this.log("Sign in error: " + JSON.stringify(error));
+                // Set uid to empty string if sign-in fails
+                if (!this.uid) {
+                    this.uid = "";
+                }
             }
 
             // Initialize ProductService after client is ready
             try {
+                this.log("Creating ProductService...");
                 this.productService = new ProductService(this.client);
                 this.log("ProductManager initialized successfully");
             } catch (error) {
                 this.log("ProductService error: " + JSON.stringify(error));
             }
+        } else {
+            this.log("ERROR: Failed to create Supabase client");
+            // Set uid to empty string if client creation fails
+            this.uid = "";
         }
+
+        this.log(`initSupabase() complete - client: ${!!this.client}, productService: ${!!this.productService}, uid: ${this.uid !== undefined ? (this.uid || "empty") : "undefined"}`);
     }
 
     /**
@@ -451,9 +494,14 @@ export class ProductManager extends BaseScriptComponent {
 
     /**
      * Check if ProductManager is fully initialized
+     * Returns true even if uid is empty string (anonymous mode)
      */
     public isInitialized(): boolean {
-        return this.client !== undefined && this.productService !== undefined && this.uid !== undefined;
+        const initialized = this.client !== undefined && this.productService !== undefined && this.uid !== undefined;
+        if (!initialized) {
+            this.log(`Initialization status - client: ${!!this.client}, productService: ${!!this.productService}, uid: ${this.uid !== undefined}`);
+        }
+        return initialized;
     }
 
     /**

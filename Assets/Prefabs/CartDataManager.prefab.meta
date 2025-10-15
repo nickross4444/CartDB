@@ -76,7 +76,7 @@
   Enabled: true
   ScriptAsset: !<reference> 2f4a395f-1db1-4a8d-946c-53bb515263b5
   ScriptInputsDefault:
-    {}
+    cartPanel: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -85,6 +85,7 @@
       testBarcode: !<string> 0602652176517
       autoScanOnStart: true
       autoScanDelay: !<float> 1.000000
+      cartPanel: !<reference.Component> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -112,6 +113,8 @@
   ScriptInputsDefault:
     nutritionScoreText: true
     infoPanel: true
+    infoPanelFrame: true
+    barcodeScanner: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -124,8 +127,9 @@
       logText: !<reference.Text> 6edda3c5-6ecc-4921-99b6-c1bc2e4a0486
       cartManager: !<MappingBased.AssignableType_1> 1bf95c12-794b-43e6-4dca-bf4b7c2dbed8
       addToCartButton: !<MappingBased.AssignableType_2> c7739d65-3a78-42b9-a15b-ac7d064df15a
-      cancelButton: !<MappingBased.AssignableType_3> 124c17a8-621c-49b2-bd5c-dbe4b6d91f46
       infoPanel: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      infoPanelFrame: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      barcodeScanner: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
