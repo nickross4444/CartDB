@@ -10,8 +10,8 @@
     - alphaTestThreshold:
         typeIdx: 1
         value: 0.500000
-  DepthWrite: false
-  DepthTest: false
+  DepthWrite: true
+  DepthTest: true
   DepthFunction: LessEqual
   TwoSided: false
   ColorMask: {x: true, y: true, z: true, w: true}

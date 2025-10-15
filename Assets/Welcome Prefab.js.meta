@@ -28,6 +28,9 @@
   ScriptInputsHidden:
     acknowledgeButton: false
     containerFrameUI: false
+    everythingButton: false
+    veganButton: false
+    vegetarianButton: false
     welcomePrefab: false
   ScriptTypesHidden:
     {}
@@ -39,6 +42,9 @@
     []
   DefaultScriptInputs:
     - welcomePrefab: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      veganButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      vegetarianButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      everythingButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       acknowledgeButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       containerFrameUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:

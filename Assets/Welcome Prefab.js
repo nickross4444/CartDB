@@ -1,10 +1,13 @@
 // Lens Studio Script: WelcomeScreenManager.JS
-// Manages a welcome screen with acknowledge button that switches to main UI container.
+// Manages a welcome screen with diet selection and acknowledge button that switches to main UI container.
 
 // ----- INPUTS -----
 // @ui {"widget":"group_start", "label":"Welcome Screen"}
 // @input SceneObject welcomePrefab {"label":"Welcome Prefab"}
-// @input Component.ScriptComponent acknowledgeButton {"label":"Acknowledge Button"}
+// @input Component.ScriptComponent veganButton {"label":"Vegan Button"}
+// @input Component.ScriptComponent vegetarianButton {"label":"Vegetarian Button"}
+// @input Component.ScriptComponent everythingButton {"label":"Everything Button"}
+// @input Component.ScriptComponent acknowledgeButton {"label":"Let's Shop Button"}
 // @ui {"widget":"group_end"}
 // @ui {"widget":"group_start", "label":"Main UI"}
 // @input SceneObject containerFrameUI {"label":"Container Frame UI"}
@@ -18,6 +21,7 @@ const STATES = {
 };
 Object.freeze(STATES);
 var currentState = STATES.WELCOME;
+var dietSelected = false;
 
 // --- Helper Functions ---
 
@@ -25,7 +29,10 @@ function validateInputs() {
     var valid = true;
     const inputsToCheck = [
         {obj: script.welcomePrefab, name: "Welcome Prefab"},
-        {obj: script.acknowledgeButton, name: "Acknowledge Button"},
+        {obj: script.veganButton, name: "Vegan Button"},
+        {obj: script.vegetarianButton, name: "Vegetarian Button"},
+        {obj: script.everythingButton, name: "Everything Button"},
+        {obj: script.acknowledgeButton, name: "Let's Shop Button"},
         {obj: script.containerFrameUI, name: "Container Frame UI"}
     ];
     
@@ -72,15 +79,26 @@ function switchToState(newState) {
     print("Successfully switched to state: " + currentState);
 }
 
-// Function to initialize button
-function initializeButton() {
-    print("=== INITIALIZING BUTTON ===");
+// Function to show/hide the Let's Shop button
+function updateLetsShopButtonVisibility() {
+    if (!script.acknowledgeButton) return;
+    
+    var buttonObject = script.acknowledgeButton.getSceneObject();
+    if (buttonObject) {
+        buttonObject.enabled = dietSelected;
+        print("Let's Shop button visibility: " + dietSelected);
+    }
+}
+
+// Function to initialize all buttons
+function initializeButtons() {
+    print("=== INITIALIZING BUTTONS ===");
     
     // Store current enabled states
     var welcomeWasEnabled = script.welcomePrefab ? script.welcomePrefab.enabled : false;
     var uiWasEnabled = script.containerFrameUI ? script.containerFrameUI.enabled : false;
     
-    // Temporarily enable both containers to ensure button script initializes properly
+    // Temporarily enable both containers to ensure button scripts initialize properly
     if (script.welcomePrefab) script.welcomePrefab.enabled = true;
     if (script.containerFrameUI) script.containerFrameUI.enabled = true;
     
@@ -98,7 +116,10 @@ function initializeButton() {
             
             script.removeEvent(initEvent);
             
-            // Bind the button
+            // Bind all buttons
+            bindButton(script.veganButton, "Vegan");
+            bindButton(script.vegetarianButton, "Vegetarian");
+            bindButton(script.everythingButton, "Everything");
             bindButton(script.acknowledgeButton, "Acknowledge");
             
             // Restore original states
@@ -109,6 +130,9 @@ function initializeButton() {
             currentState = STATES.WELCOME;
             if (script.welcomePrefab) script.welcomePrefab.enabled = true;
             if (script.containerFrameUI) script.containerFrameUI.enabled = false;
+            
+            // Hide Let's Shop button initially
+            updateLetsShopButtonVisibility();
             
             print("Button initialization complete. Current state: " + currentState);
         }
@@ -157,7 +181,14 @@ function handlePinchEvent(buttonName) {
     print("DEBUG: Pinch event RECEIVED for button: " + buttonName);
     print("DEBUG: Current state: " + currentState);
     
-    if (buttonName === "Acknowledge" && currentState === STATES.WELCOME) {
+    // Handle diet selection buttons
+    if ((buttonName === "Vegan" || buttonName === "Vegetarian" || buttonName === "Everything") && currentState === STATES.WELCOME) {
+        print("EVENT: Diet selected - " + buttonName);
+        dietSelected = true;
+        updateLetsShopButtonVisibility();
+    }
+    // Handle Let's Shop button
+    else if (buttonName === "Acknowledge" && currentState === STATES.WELCOME && dietSelected) {
         print("EVENT: Switching to main UI");
         switchToState(STATES.MAIN_UI);
     } else {
@@ -179,8 +210,8 @@ function initialize() {
     
     print("Starting button initialization process...");
     
-    // Initialize button with proper container activation
-    initializeButton();
+    // Initialize buttons with proper container activation
+    initializeButtons();
     
     print("WelcomeScreenManager initialized successfully. Awaiting user interaction.");
 }
