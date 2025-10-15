@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/d03c9b3c-5f9c-4c95-bbb5-e52f7bd8d974>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 95bc1ec4-49e1-488c-9c37-6b9da50f27ab
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 95bc1ec4-49e1-488c-9c37-6b9da50f27ab
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b130cef5-929d-4983-ab1a-2784858b543a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b130cef5-929d-4983-ab1a-2784858b543a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 05ac529b-df02-41cd-88f0-b18f579fab9a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    averageNutritionScoreText: false
+    cartItemsText: false
+    logText: false
+    productManager: false
+    totalPriceText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - productManager: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      cartItemsText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      totalPriceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      averageNutritionScoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      logText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType productManager {"hint":"Reference to ProductManager for shared Supabase client"}'
+    - '// @input Component.Text cartItemsText {"hint":"Optional: Text component to display all cart items"}'
+    - '// @input Component.Text totalPriceText {"hint":"Optional: Text component to display total price"}'
+    - '// @input Component.Text averageNutritionScoreText {"hint":"Optional: Text component to display average nutrition score"}'
+    - '// @input Component.Text logText {"hint":"Optional: Text component to display logs"}'
