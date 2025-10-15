@@ -1,0 +1,204 @@
+- !<AssetCache>
+  AssetFiles:
+    deefac8b-105b-4594-93c4-1ca96dddc4f6: d104a1cd-cf41-4cc3-aecf-0273ed03d3df/2d82e66e11af8027184bae5387d8fe28/Data/imageRGBA_multi_select.ss_graph
+  Assets:
+    - !<ShaderGraphPass/deefac8b-105b-4594-93c4-1ca96dddc4f6>
+      PackagePath: ""
+      DefaultDefines:
+        []
+      DefaultProperties:
+        Port_Default_N050:
+          typeIdx: 5
+          value: {x: 0.682155, y: 0.398550, z: 0.514778, w: 0.000000}
+        Port_Default_N055:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Depth_N004:
+          typeIdx: 1
+          value: 1.000000
+        Port_FinalColor1_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor2_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor3_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_GSplatPointSize_N004:
+          typeIdx: 1
+          value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Input1_N009:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input1_N010:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input1_N034:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N035:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N046:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input1_N051:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input1_N052:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input1_N053:
+          typeIdx: 1
+          value: 1.000000
+        Port_LODValue_N000:
+          typeIdx: 1
+          value: 0.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_RayDirection_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_RayOrigin_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_UVCoord_N000:
+          typeIdx: 3
+          value: {x: 0.000000, y: 0.000000}
+        Port_Value1_N036:
+          typeIdx: 1
+          value: 1.000000
+        Port_Value1_N043:
+          typeIdx: 1
+          value: 1.000000
+        Port_Value2_N013:
+          typeIdx: 1
+          value: 1.000000
+        Port_Value3_N013:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N013:
+          typeIdx: 1
+          value: 1.000000
+        Port_WorldNormal_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_WorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_WorldTangent_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 1.000000}
+      PassUiData: !<PassUiData>
+        ExtraDefines:
+          - SC_ENABLE_RT_CASTER
+        PassBindings:
+          - mLabel: Graph Parameters
+            mType: Invalid
+            mName: ""
+            mWidget: group_start
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Custom Map
+            mType: Property
+            mName: baseTex
+            mWidget: texture_group
+            mHint: "Property: baseTex"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: R
+            mType: Property
+            mName: red_channel
+            mWidget: checkbox
+            mHint: "Property: red_channel"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: G
+            mType: Property
+            mName: green_channel
+            mWidget: checkbox
+            mHint: "Property: green_channel"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: B
+            mType: Property
+            mName: blue_channel
+            mWidget: checkbox
+            mHint: "Property: blue_channel"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: A
+            mType: Property
+            mName: alpha_channel
+            mWidget: checkbox
+            mHint: "Property: alpha_channel"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: ""
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Alpha Test Threshold
+            mType: Property
+            mName: alphaTestThreshold
+            mWidget: slider
+            mHint: |-
+              Property: alphaTestThreshold
+              
+              When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear.
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.001000
+            mDefaultVal: 0.500000
+            mValues:
+              []
+        ShaderType: Mesh3d
+      ShaderPath: d104a1cd-cf41-4cc3-aecf-0273ed03d3df/2d82e66e11af8027184bae5387d8fe28/Data/b01d0f7/imageRGBA_multi_select.glsl
+      Defines:
+        []
+      Properties:
+        {}
+  SourceHash: 2d82e66e11af8027184bae5387d8fe28
+  FileHash: 78d39064d5dcda14704485ab966d3827
+  NativePackageItems:
+    []

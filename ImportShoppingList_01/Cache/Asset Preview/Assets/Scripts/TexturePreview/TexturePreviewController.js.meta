@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/24802b52-774c-4076-b989-ddf9628968fe>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 2b1bb5d1-197f-4b43-8295-0cd4cf634d50
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 2b1bb5d1-197f-4b43-8295-0cd4cf634d50
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> d06d4875-7997-4d13-a86b-87535a5c6145
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/d06d4875-7997-4d13-a86b-87535a5c6145>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: cbd00728-2318-4f56-8f95-fafbb8ab954f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    channelBackgroundObjects: false
+    fovController: false
+    mappingBackgroundObjects: false
+    mappingObjs: false
+    textureLeftSection: false
+    textureMiddleSection: false
+    texturePreviewMats: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - textureLeftSection: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      textureMiddleSection: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fovController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      channelBackgroundObjects: !<reference.SceneObject[]>
+        []
+      mappingBackgroundObjects: !<reference.SceneObject[]>
+        []
+      mappingObjs: !<reference.SceneObject[]>
+        []
+      texturePreviewMats: !<reference.Material[]>
+        []
+  ScriptTypes:
+    -
+      {}

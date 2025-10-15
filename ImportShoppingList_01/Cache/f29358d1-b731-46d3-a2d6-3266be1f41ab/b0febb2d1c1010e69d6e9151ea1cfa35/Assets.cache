@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    cd97dc51-f685-4dc5-9a97-0ce23e0a78a6: f29358d1-b731-46d3-a2d6-3266be1f41ab/b0febb2d1c1010e69d6e9151ea1cfa35/Data/round_rect_grey.png
+  Assets:
+    - !<FileTexture/cd97dc51-f685-4dc5-9a97-0ce23e0a78a6>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 196
+        Height: 196
+  SourceHash: b0febb2d1c1010e69d6e9151ea1cfa35
+  FileHash: 60df904fde8ad203fb98822bdfaf5691
+  NativePackageItems:
+    []

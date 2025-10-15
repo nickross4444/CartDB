@@ -1,0 +1,13 @@
+dock:
+  isLocked: false
+  main:
+    items:
+      - items:
+          - persistentName: Snap.Plugin.Gui.AssetLibraryPanel
+            Uuid: 7593b4d6-2c0c-466c-baf6-a94ed6c56555
+        type: section
+        current: 0
+    sizes:
+      - 1526
+    type: splitter
+    orientation: horizontal

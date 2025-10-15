@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/bf3c0d4d-7b52-d093-7bec-68a8980c2b4a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> bc168e67-17cb-4051-b86a-1d8ed4094e8f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> bc168e67-17cb-4051-b86a-1d8ed4094e8f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> cde4ded7-56f1-4d66-ae54-23fadad12b01
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/cde4ded7-56f1-4d66-ae54-23fadad12b01>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d9278162-b7cf-4572-ae87-877f0c739c0e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    micAudioTrack: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - micAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"This script manages microphone input"}'
+    - '// @ui {"widget":"separator"}'
+    - // @input Asset.AudioTrackAsset micAudioTrack

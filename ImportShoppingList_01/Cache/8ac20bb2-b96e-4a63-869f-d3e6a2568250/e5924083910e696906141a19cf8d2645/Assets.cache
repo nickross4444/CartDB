@@ -1,0 +1,1495 @@
+- !<AssetCache>
+  AssetFiles:
+    fdd54b57-ef8f-4dad-ac27-b6000184c73b: 8ac20bb2-b96e-4a63-869f-d3e6a2568250/e5924083910e696906141a19cf8d2645/Data/icon_mat.ss_graph
+  Assets:
+    - !<ShaderGraphPass/fdd54b57-ef8f-4dad-ac27-b6000184c73b>
+      PackagePath: ""
+      DefaultDefines:
+        - NODE_161_DROPLIST_ITEM 0
+        - NODE_173_DROPLIST_ITEM 0
+      DefaultProperties:
+        Port_Center_N092:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Center_N094:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Center_N100:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Center_N113:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Center_N137:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Center_N177:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Center_N233:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Center_N340:
+          typeIdx: 3
+          value: {x: 0.500000, y: 0.500000}
+        Port_Default_N068:
+          typeIdx: 1
+          value: 1.000000
+        Port_Default_N122:
+          typeIdx: 1
+          value: 1.000000
+        Port_Default_N123:
+          typeIdx: 1
+          value: 1.000000
+        Port_Default_N125:
+          typeIdx: 1
+          value: 1.000000
+        Port_Default_N126:
+          typeIdx: 5
+          value: {x: 1.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Default_N131:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N132:
+          typeIdx: 1
+          value: 1.000000
+        Port_Default_N149:
+          typeIdx: 5
+          value: {x: 1.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Default_N154:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Default_N209:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Default_N281:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N282:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N286:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N287:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N289:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N293:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N294:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N296:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N297:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N298:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N301:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N304:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N306:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N308:
+          typeIdx: 1
+          value: 0.000000
+        Port_Default_N323:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Default_N324:
+          typeIdx: 5
+          value: {x: 1.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Default_N325:
+          typeIdx: 5
+          value: {x: 1.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Depth_N004:
+          typeIdx: 1
+          value: 1.000000
+        Port_Dimension_N092:
+          typeIdx: 3
+          value: {x: 0.100000, y: 1.000000}
+        Port_Dimension_N094:
+          typeIdx: 3
+          value: {x: 1.000000, y: 1.000000}
+        Port_Dimension_N100:
+          typeIdx: 3
+          value: {x: 1.000000, y: 1.000000}
+        Port_Dimension_N113:
+          typeIdx: 3
+          value: {x: 1.000000, y: 1.000000}
+        Port_FinalColor1_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor2_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_FinalColor3_N004:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_GSplatPointSize_N004:
+          typeIdx: 1
+          value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Input0_N186:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input0_N242:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N019:
+          typeIdx: 1
+          value: 2.000000
+        Port_Input1_N020:
+          typeIdx: 1
+          value: -1.000000
+        Port_Input1_N030:
+          typeIdx: 1
+          value: 0.001000
+        Port_Input1_N032:
+          typeIdx: 3
+          value: {x: 0.000000, y: 0.000000}
+        Port_Input1_N038:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N051:
+          typeIdx: 1
+          value: 0.001000
+        Port_Input1_N053:
+          typeIdx: 3
+          value: {x: 0.000000, y: 0.000000}
+        Port_Input1_N056:
+          typeIdx: 1
+          value: 7.500000
+        Port_Input1_N064:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N066:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N072:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N089:
+          typeIdx: 1
+          value: 2.000000
+        Port_Input1_N090:
+          typeIdx: 1
+          value: -1.000000
+        Port_Input1_N098:
+          typeIdx: 1
+          value: 0.001000
+        Port_Input1_N103:
+          typeIdx: 1
+          value: 0.001000
+        Port_Input1_N105:
+          typeIdx: 3
+          value: {x: 0.000000, y: 0.000000}
+        Port_Input1_N112:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N115:
+          typeIdx: 3
+          value: {x: 0.000000, y: 0.000000}
+        Port_Input1_N127:
+          typeIdx: 1
+          value: 2.500000
+        Port_Input1_N141:
+          typeIdx: 1
+          value: 45.000000
+        Port_Input1_N142:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N144:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N160:
+          typeIdx: 1
+          value: 4.000000
+        Port_Input1_N185:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N186:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input1_N241:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N242:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input1_N259:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N263:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input1_N264:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N265:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input1_N335:
+          typeIdx: 1
+          value: 0.600000
+        Port_Input1_N345:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.000000}
+        Port_Input1_N361:
+          typeIdx: 1
+          value: 0.000000
+        Port_Input2_N038:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N064:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N066:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N072:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N112:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N142:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N144:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N148:
+          typeIdx: 3
+          value: {x: 0.000000, y: 0.000000}
+        Port_Input2_N185:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N241:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N264:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N265:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input2_N361:
+          typeIdx: 1
+          value: 1.000000
+        Port_Input_N006:
+          typeIdx: 5
+          value: {x: 0.761000, y: 0.820000, z: 0.871000, w: 0.000000}
+        Port_Input_N339:
+          typeIdx: 5
+          value: {x: 0.964000, y: 0.964000, z: 0.968000, w: 0.000000}
+        Port_LODValue_N002:
+          typeIdx: 1
+          value: 0.000000
+        Port_LODValue_N166:
+          typeIdx: 1
+          value: 0.000000
+        Port_LODValue_N219:
+          typeIdx: 1
+          value: 0.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_RangeMaxA_N021:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N022:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N039:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N042:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N047:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N057:
+          typeIdx: 1
+          value: 0.010000
+        Port_RangeMaxA_N101:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N133:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N135:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N136:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N138:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N171:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N175:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N198:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N231:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N252:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N268:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N276:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N277:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N295:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N299:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N300:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N303:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxA_N305:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N039:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N042:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N047:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N057:
+          typeIdx: 1
+          value: 0.160000
+        Port_RangeMaxB_N133:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N135:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N136:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N138:
+          typeIdx: 1
+          value: 0.800000
+        Port_RangeMaxB_N175:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N198:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N231:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N252:
+          typeIdx: 1
+          value: 1.000000
+        Port_RangeMaxB_N276:
+          typeIdx: 1
+          value: -0.435000
+        Port_RangeMaxB_N295:
+          typeIdx: 1
+          value: -0.435000
+        Port_RangeMaxB_N299:
+          typeIdx: 1
+          value: -0.435000
+        Port_RangeMaxB_N300:
+          typeIdx: 1
+          value: -0.435000
+        Port_RangeMaxB_N303:
+          typeIdx: 1
+          value: -0.065000
+        Port_RangeMaxB_N305:
+          typeIdx: 1
+          value: -0.065000
+        Port_RangeMinA_N021:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N022:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N039:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N042:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N047:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N057:
+          typeIdx: 1
+          value: 0.001000
+        Port_RangeMinA_N101:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N133:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N135:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N136:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N138:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N171:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N175:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N198:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N231:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N252:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N268:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N276:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N277:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N295:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N299:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N300:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N303:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinA_N305:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinB_N021:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinB_N022:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinB_N057:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinB_N101:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinB_N136:
+          typeIdx: 1
+          value: 0.500000
+        Port_RangeMinB_N138:
+          typeIdx: 1
+          value: 1.005000
+        Port_RangeMinB_N175:
+          typeIdx: 1
+          value: -1.000000
+        Port_RangeMinB_N198:
+          typeIdx: 1
+          value: -1.000000
+        Port_RangeMinB_N231:
+          typeIdx: 1
+          value: -1.000000
+        Port_RangeMinB_N252:
+          typeIdx: 1
+          value: -1.000000
+        Port_RangeMinB_N276:
+          typeIdx: 1
+          value: -0.500000
+        Port_RangeMinB_N295:
+          typeIdx: 1
+          value: -0.500000
+        Port_RangeMinB_N299:
+          typeIdx: 1
+          value: -0.500000
+        Port_RangeMinB_N300:
+          typeIdx: 1
+          value: -0.500000
+        Port_RangeMinB_N303:
+          typeIdx: 1
+          value: 0.000000
+        Port_RangeMinB_N305:
+          typeIdx: 1
+          value: 0.000000
+        Port_RayDirection_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_RayOrigin_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_Scale_N340:
+          typeIdx: 3
+          value: {x: 1.250000, y: 1.250000}
+        Port_Value0_N068:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N122:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N123:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N125:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N131:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N132:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N154:
+          typeIdx: 5
+          value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+        Port_Value0_N281:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N282:
+          typeIdx: 1
+          value: 0.500000
+        Port_Value0_N286:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N287:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N289:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N293:
+          typeIdx: 1
+          value: -0.500000
+        Port_Value0_N301:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N304:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N306:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N308:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value0_N325:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+        Port_Value1_N097:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value1_N157:
+          typeIdx: 1
+          value: 1.000000
+        Port_Value1_N282:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value1_N293:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N023:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N040:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N075:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N077:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N082:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N097:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N157:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N269:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N272:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value3_N362:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N023:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N040:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N075:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N077:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N082:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N097:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N157:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N269:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N272:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value4_N362:
+          typeIdx: 1
+          value: 0.000000
+        Port_Value_N288:
+          typeIdx: 1
+          value: -0.500000
+        Port_WorldNormal_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 1.000000, z: 0.000000}
+        Port_WorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        Port_WorldTangent_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 1.000000}
+      PassUiData: !<PassUiData>
+        ExtraDefines:
+          - SC_ENABLE_RT_CASTER
+        PassBindings:
+          - mLabel: Graph Parameters
+            mType: Invalid
+            mName: ""
+            mWidget: group_start
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Shape
+            mType: DefineSelect
+            mName: ""
+            mWidget: ""
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              - mLabel: Color
+                mType: DefineSelectValue
+                mName: NODE_161_DROPLIST_ITEM 0
+                mWidget: ""
+                mHint: ""
+                mMin: ~
+                mMax: ~
+                mStep: ~
+                mDefaultVal: ~
+                mValues:
+                  []
+              - mLabel: Texture
+                mType: DefineSelectValue
+                mName: NODE_161_DROPLIST_ITEM 1
+                mWidget: ""
+                mHint: ""
+                mMin: ~
+                mMax: ~
+                mStep: ~
+                mDefaultVal: ~
+                mValues:
+                  []
+              - mLabel: Gradient
+                mType: DefineSelectValue
+                mName: NODE_161_DROPLIST_ITEM 2
+                mWidget: ""
+                mHint: ""
+                mMin: ~
+                mMax: ~
+                mStep: ~
+                mDefaultVal: ~
+                mValues:
+                  []
+          - mLabel: to Quad Gradient
+            mType: Define
+            mName: toQuadShapeGrad
+            mWidget: checkbox
+            mHint: |-
+              Define: toQuadShapeGrad
+              
+              Use when Quad Gradient needed
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Gradient Color A
+            mType: Property
+            mName: shapeGradColorA
+            mWidget: color
+            mHint: "Property: shapeGradColorA"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Gradient Color B
+            mType: Property
+            mName: shapeGradColorB
+            mWidget: color
+            mHint: "Property: shapeGradColorB"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Point A
+            mType: Property
+            mName: shapeGradPointA
+            mWidget: spinbox
+            mHint: "Property: shapeGradPointA"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Point B
+            mType: Property
+            mName: shapeGradPointB
+            mWidget: spinbox
+            mHint: "Property: shapeGradPointB"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Gradient Color C
+            mType: Property
+            mName: shapeGradColorC
+            mWidget: color
+            mHint: "Property: shapeGradColorC"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Gradient Color D
+            mType: Property
+            mName: shapeGradColorD
+            mWidget: color
+            mHint: "Property: shapeGradColorD"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Active_texture
+            mType: Property
+            mName: baseTex
+            mWidget: texture_group
+            mHint: "Property: baseTex"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Texture
+            mType: Property
+            mName: shapeTexture
+            mWidget: texture_group
+            mHint: "Property: shapeTexture"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Active
+            mType: Property
+            mName: Active
+            mWidget: checkbox
+            mHint: "Property: Active"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Hover
+            mType: Property
+            mName: Hover
+            mWidget: checkbox
+            mHint: "Property: Hover"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Scale
+            mType: Property
+            mName: shapeScale
+            mWidget: spinbox
+            mHint: "Property: shapeScale"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Offset
+            mType: Property
+            mName: shapeOffset
+            mWidget: spinbox
+            mHint: "Property: shapeOffset"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Scale
+            mType: Property
+            mName: shapeScaleGrad
+            mWidget: spinbox
+            mHint: "Property: shapeScaleGrad"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Offset
+            mType: Property
+            mName: shapeQuadOffset
+            mWidget: spinbox
+            mHint: "Property: shapeQuadOffset"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Color
+            mType: Property
+            mName: shapeColor
+            mWidget: color
+            mHint: "Property: shapeColor"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Alpha
+            mType: Property
+            mName: shapeAlpha
+            mWidget: slider
+            mHint: "Property: shapeAlpha"
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Width X
+            mType: Property
+            mName: shapeWidthX
+            mWidget: slider
+            mHint: "Property: shapeWidthX"
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Height Y
+            mType: Property
+            mName: shapeHeightY
+            mWidget: slider
+            mHint: "Property: shapeHeightY"
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Roundness
+            mType: Property
+            mName: shapeRoundness
+            mWidget: slider
+            mHint: "Property: shapeRoundness"
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.001000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Rotation
+            mType: Property
+            mName: shapeRotation
+            mWidget: slider
+            mHint: "Property: shapeRotation"
+            mMin: 0.000000
+            mMax: 45.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Pinning
+            mType: Invalid
+            mName: ""
+            mWidget: group_start
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: X Right Pin
+            mType: Property
+            mName: xRightPin
+            mWidget: checkbox
+            mHint: "Property: xRightPin"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: X Left Pin
+            mType: Property
+            mName: xLeftPin
+            mWidget: checkbox
+            mHint: "Property: xLeftPin"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: X Offset
+            mType: Property
+            mName: xOffset
+            mWidget: slider
+            mHint: "Property: xOffset"
+            mMin: -0.500000
+            mMax: 1.500000
+            mStep: 0.010000
+            mDefaultVal: 0.500000
+            mValues:
+              []
+          - mLabel: Y Up Pin
+            mType: Property
+            mName: yUpPin
+            mWidget: checkbox
+            mHint: "Property: yUpPin"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Y Down Pin
+            mType: Property
+            mName: yDownPin
+            mWidget: checkbox
+            mHint: "Property: yDownPin"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Y Offset
+            mType: Property
+            mName: yOffset
+            mWidget: slider
+            mHint: "Property: yOffset"
+            mMin: -0.500000
+            mMax: 1.500000
+            mStep: 0.010000
+            mDefaultVal: 0.500000
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: ""
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Stroke
+            mType: Define
+            mName: Tweak_N139
+            mWidget: group_start
+            mHint: "Define: Tweak_N139"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: to Quad Gradient
+            mType: Define
+            mName: toQuadStrokeGrad
+            mWidget: checkbox
+            mHint: |-
+              Define: toQuadStrokeGrad
+              
+              Use when Quad Gradient needed
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Mode
+            mType: DefineSelect
+            mName: ""
+            mWidget: ""
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              - mLabel: Color
+                mType: DefineSelectValue
+                mName: NODE_164_DROPLIST_ITEM 0
+                mWidget: ""
+                mHint: ""
+                mMin: ~
+                mMax: ~
+                mStep: ~
+                mDefaultVal: ~
+                mValues:
+                  []
+              - mLabel: Texture
+                mType: DefineSelectValue
+                mName: NODE_164_DROPLIST_ITEM 1
+                mWidget: ""
+                mHint: ""
+                mMin: ~
+                mMax: ~
+                mStep: ~
+                mDefaultVal: ~
+                mValues:
+                  []
+              - mLabel: Gradient
+                mType: DefineSelectValue
+                mName: NODE_164_DROPLIST_ITEM 2
+                mWidget: ""
+                mHint: ""
+                mMin: ~
+                mMax: ~
+                mStep: ~
+                mDefaultVal: ~
+                mValues:
+                  []
+          - mLabel: Texture
+            mType: Property
+            mName: strokeTexture
+            mWidget: texture_group
+            mHint: "Property: strokeTexture"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Gradient Color A
+            mType: Property
+            mName: shapeGradColorA2
+            mWidget: color
+            mHint: "Property: shapeGradColorA2"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Gradient Color B
+            mType: Property
+            mName: shapeGradColorB2
+            mWidget: color
+            mHint: "Property: shapeGradColorB2"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Point A
+            mType: Property
+            mName: shapeGradPointA2
+            mWidget: spinbox
+            mHint: "Property: shapeGradPointA2"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Point B
+            mType: Property
+            mName: shapeGradPointB2
+            mWidget: spinbox
+            mHint: "Property: shapeGradPointB2"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Gradient Color C
+            mType: Property
+            mName: shapeGradColorC2
+            mWidget: color
+            mHint: "Property: shapeGradColorC2"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Gradient Color D
+            mType: Property
+            mName: shapeGradColorD2
+            mWidget: color
+            mHint: "Property: shapeGradColorD2"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Scale
+            mType: Property
+            mName: strokeScale
+            mWidget: spinbox
+            mHint: "Property: strokeScale"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Scale
+            mType: Property
+            mName: shapeScaleGrad2
+            mWidget: spinbox
+            mHint: "Property: shapeScaleGrad2"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Offset
+            mType: Property
+            mName: shapeQuadOffset2
+            mWidget: spinbox
+            mHint: "Property: shapeQuadOffset2"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Offset
+            mType: Property
+            mName: strokeOffset
+            mWidget: spinbox
+            mHint: "Property: strokeOffset"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Color
+            mType: Property
+            mName: strokeColor
+            mWidget: color
+            mHint: "Property: strokeColor"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: "Alpha "
+            mType: Property
+            mName: strokeAlpha
+            mWidget: slider
+            mHint: "Property: strokeAlpha"
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Thickness
+            mType: Property
+            mName: strokeThickness
+            mWidget: slider
+            mHint: "Property: strokeThickness"
+            mMin: 0.001000
+            mMax: 1.000000
+            mStep: 0.001000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: Tweak_N139
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Shadow
+            mType: Define
+            mName: Tweak_N124
+            mWidget: group_start
+            mHint: "Define: Tweak_N124"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Color
+            mType: Property
+            mName: shadowColor
+            mWidget: color
+            mHint: "Property: shadowColor"
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Alpha
+            mType: Property
+            mName: shadowAlpha
+            mWidget: slider
+            mHint: "Property: shadowAlpha"
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Blur
+            mType: Property
+            mName: shadowBlur
+            mWidget: slider
+            mHint: "Property: shadowBlur"
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Distance
+            mType: Property
+            mName: shadowDistance
+            mWidget: slider
+            mHint: "Property: shadowDistance"
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: Rotation
+            mType: Property
+            mName: shadowRotation
+            mWidget: slider
+            mHint: "Property: shadowRotation"
+            mMin: 0.000000
+            mMax: 360.000000
+            mStep: 0.010000
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: Tweak_N124
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Advanced Settings
+            mType: Invalid
+            mName: ""
+            mWidget: group_start
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Aspect Ratio Fix
+            mType: Define
+            mName: shapeAspectFix
+            mWidget: checkbox
+            mHint: |-
+              Define: shapeAspectFix
+              
+              Use for Stretch Image Mode
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Cut out Inner Shadow
+            mType: Define
+            mName: innerCutout
+            mWidget: checkbox
+            mHint: |-
+              Define: innerCutout
+              
+              Use if you need shadow disappear from inner shape
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Invert Color
+            mType: Define
+            mName: shapeColorInvert
+            mWidget: checkbox
+            mHint: |-
+              Define: shapeColorInvert
+              
+              Use for Masks
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: ""
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: ""
+            mType: GroupEnd
+            mName: ""
+            mWidget: group_end
+            mHint: ""
+            mMin: ~
+            mMax: ~
+            mStep: ~
+            mDefaultVal: ~
+            mValues:
+              []
+          - mLabel: Alpha Test Threshold
+            mType: Property
+            mName: alphaTestThreshold
+            mWidget: slider
+            mHint: |-
+              Property: alphaTestThreshold
+              
+              When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear.
+            mMin: 0.000000
+            mMax: 1.000000
+            mStep: 0.001000
+            mDefaultVal: 0.500000
+            mValues:
+              []
+        ShaderType: Mesh3d
+      ShaderPath: 8ac20bb2-b96e-4a63-869f-d3e6a2568250/e5924083910e696906141a19cf8d2645/Data/b01d0f7/icon_mat.glsl
+      Defines:
+        []
+      Properties:
+        {}
+  SourceHash: e5924083910e696906141a19cf8d2645
+  FileHash: 4746c07aa269f057316d0686dbea7f2c
+  NativePackageItems:
+    []

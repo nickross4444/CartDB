@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/30936b01-643f-4eb2-b6f8-45dae7bbb53f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2ef5deed-4607-4ff3-a76d-b1d81beff759
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2ef5deed-4607-4ff3-a76d-b1d81beff759
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2e40def1-cd60-4656-90e1-0141c760c67a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2e40def1-cd60-4656-90e1-0141c760c67a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3d45ac31-3df0-4559-b42b-c8f387df6bd7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    doImageToTextOnTap: false
+    imageToReadTexture: false
+    imageToTextPrompt: false
+    textDisplay: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      imageToReadTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      imageToTextPrompt: "Can you read what's in this image? give me the output as a text, "
+      doImageToTextOnTap: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Text textDisplay
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Image to Text Example"}'
+    - // @input Asset.Texture imageToReadTexture
+    - "// @input string imageToTextPrompt = \"Can you read what's in this image? give me the output as a text, \" {\"widget\":\"text_area\"}"
+    - '// @input bool doImageToTextOnTap {"label":"Run On Tap"}'
+    - '// @ui {"widget":"group_end"}'

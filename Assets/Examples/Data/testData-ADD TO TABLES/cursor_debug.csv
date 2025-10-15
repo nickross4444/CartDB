@@ -1,5 +1,3 @@
-id,created_at,user_id,x,y,timestamp,channel_name
-1,2025-10-13T17:00:00.000Z,spectacles_demo1,45.5,67.2,2025-10-13T17:00:00.000Z,spectacles-demo-channel
-2,2025-10-13T17:00:05.000Z,spectacles_demo1,48.3,65.8,2025-10-13T17:00:05.000Z,spectacles-demo-channel
-3,2025-10-13T17:00:10.000Z,spectacles_demo2,52.1,70.4,2025-10-13T17:00:10.000Z,spectacles-demo-channel
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:481ccabfa466eb7eb5bc86947ac5259f7ed2b9d4f60cbbaa793531783149a0e9
+size 359

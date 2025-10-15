@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/6eadacff-16d0-4117-893f-5911ae51107e>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 33cfab6c-3190-4461-91e0-064986fea661
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 33cfab6c-3190-4461-91e0-064986fea661
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 0c74a275-3797-4e56-8eca-faa54bb435fb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/0c74a275-3797-4e56-8eca-faa54bb435fb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 96763a51-50ea-4b4b-89d3-ed45625a389c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    hintObject: false
+    iconBackgroundObjects: false
+    iconMaterial: false
+    iconTextures: false
+    texturePreviewMaterial: false
+    textureRenderMeshes: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - iconBackgroundObjects: !<reference.SceneObject[]>
+        []
+      iconMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      iconTextures: !<reference.Texture[]>
+        []
+      texturePreviewMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      textureRenderMeshes: !<reference.RenderMeshVisual[]>
+        []
+      hintObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

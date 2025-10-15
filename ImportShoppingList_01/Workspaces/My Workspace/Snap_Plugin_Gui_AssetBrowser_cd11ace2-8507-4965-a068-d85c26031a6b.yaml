@@ -1,0 +1,16 @@
+CollapsedEntities:
+  type: stringset
+  value:
+    size: 10
+    values:
+      - Echopark.hdr
+      - IMG_39262.png
+      - ImageMaterial.mat
+      - RemoteServiceGateway.lspkg
+      - RemoteServiceGateway.lspkg/HostedExternal/Examples/OpenAI_New.ts
+      - RemoteServiceGateway.lspkg/HostedSnap
+      - RemoteServiceGateway.lspkg/Resources
+      - RemoteServiceGateway.lspkg/Utils
+      - RemoteServiceGateway.lspkg/package.native
+      - image_unlit.ss_graph
+  options: 4

@@ -1,0 +1,79 @@
+{ 
+	"ui": 
+	[
+		{
+        	"label": "Graph Parameters",
+        	"widget": "group_start"
+        },
+{ 
+                	"bindingName": "baseTex", 
+                	"label":       "Custom Map", 
+                	"widget":      "texture_group",
+                	"sortIndex":   "0",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "red_channel",
+                	"label":       "R",
+                	"widget":      "checkbox",
+                	"sortIndex":   "1",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "green_channel",
+                	"label":       "G",
+                	"widget":      "checkbox",
+                	"sortIndex":   "2",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "blue_channel",
+                	"label":       "B",
+                	"widget":      "checkbox",
+                	"sortIndex":   "3",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "alpha_channel",
+                	"label":       "A",
+                	"widget":      "checkbox",
+                	"sortIndex":   "4",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "envmap_preview",
+                	"label":       "Envmap Preview",
+                	"widget":      "checkbox",
+                	"sortIndex":   "10",
+                	"hint":        ""
+                },
+
+        {
+        	"widget": "group_end"
+        },
+        
+		
+	{
+		"bindingName": "alphaTestThreshold",
+		"widget": "slider",
+		"min" : 0.0,
+		"max" : 1.0,
+		"step": 0.001,
+		"default": 0.5,
+		"hint": "When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear."
+	}
+	
+	],
+	
+	"shaderType": "Mesh3d",
+	
+	"extraDefines":
+	[
+		"SC_ENABLE_RT_CASTER"
+	]
+}

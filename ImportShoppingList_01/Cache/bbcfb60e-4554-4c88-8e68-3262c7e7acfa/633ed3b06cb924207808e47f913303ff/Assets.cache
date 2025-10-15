@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    55ce444d-7cc2-47c0-9a8f-b949d20fdb3c: bbcfb60e-4554-4c88-8e68-3262c7e7acfa/633ed3b06cb924207808e47f913303ff/Data/tooltip_texture.png
+  Assets:
+    - !<FileTexture/55ce444d-7cc2-47c0-9a8f-b949d20fdb3c>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 264
+        Height: 40
+  SourceHash: 633ed3b06cb924207808e47f913303ff
+  FileHash: 0cc3640c9fd454857e62060592a91f0d
+  NativePackageItems:
+    []

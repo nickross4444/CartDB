@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/8f53ff14-05c3-4d09-a5fb-cda20a3a185f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 368d122a-f1f0-4626-9a70-7495dbc2f32d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 368d122a-f1f0-4626-9a70-7495dbc2f32d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b2c9b1d3-5de6-444e-88b1-95580d992471
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b2c9b1d3-5de6-444e-88b1-95580d992471>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: f4af60e4-2b24-4eb0-a849-b77f7b03178d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    dynamicAudioOutput: false
+    generateMusicOnTap: false
+    musicPrompt: false
+    negativePrompt: false
+    playAudioOnTap: false
+    sampleCount: false
+    seed: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - musicPrompt: Create an upbeat electronic dance track with a driving beat
+      negativePrompt: "vocals, slow tempo"
+      seed: !<float> 12345.000000
+      sampleCount: !<float> 1.000000
+      generateMusicOnTap: false
+      dynamicAudioOutput: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      playAudioOnTap: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Music Generation Example"}'
+    - '// @input string musicPrompt = "An energetic electronic dance track with a fast tempo" {"widget":"text_area"}'
+    - '// @input string negativePrompt = "vocals, slow tempo" {"widget":"text_area"}'
+    - // @input float seed = 12345
+    - // @input float sampleCount = 1
+    - '// @input bool generateMusicOnTap {"label":"Generate Music on tap"}'
+    - // @input AssignableType dynamicAudioOutput
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Audio Output"}'
+    - '// @input bool playAudioOnTap {"label":"Play Generated Audio"}'
+    - '// @ui {"widget":"group_end"}'

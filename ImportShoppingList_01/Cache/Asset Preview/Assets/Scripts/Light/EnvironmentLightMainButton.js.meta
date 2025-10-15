@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/a66f032b-e7d9-42d2-8575-6a091350ab0d>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 36bbc220-6028-4561-9f35-f5e3ba6c34b3
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 36bbc220-6028-4561-9f35-f5e3ba6c34b3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 19127760-8154-4ce8-84e9-cbbcc1345a73
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/19127760-8154-4ce8-84e9-cbbcc1345a73>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: fbe64d13-1a3b-4c7f-b721-04ffd25801c7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    dropDownMenu: false
+    firstObj: false
+    lightController: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - lightController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      dropDownMenu: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      firstObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

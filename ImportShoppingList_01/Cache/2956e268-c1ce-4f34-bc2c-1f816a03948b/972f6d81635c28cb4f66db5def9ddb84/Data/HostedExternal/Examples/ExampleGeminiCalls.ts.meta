@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/9bfd3250-4aed-800e-f540-8c4d06b401b7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7f15d1c4-11a8-4106-8954-e60757e2fa26
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7f15d1c4-11a8-4106-8954-e60757e2fa26
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 44428f67-abef-44ba-bc74-6d2b13baeaac
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/44428f67-abef-44ba-bc74-6d2b13baeaac>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 7331e53e-11b6-4454-a113-d831b5bf4e3d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    doFunctionCallingOnTap: false
+    doTextGenerationOnTap: false
+    functionCallingPrompt: false
+    generateImageOnTap: false
+    imageGenerationPrompt: false
+    imgObject: false
+    modelPrompt: false
+    textDisplay: false
+    textPrompt: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      modelPrompt: "You are an incredibly smart but witty AI assistant who likes to answers life's greatest mysteries in under two sentences"
+      textPrompt: Hey bestie!!!
+      doTextGenerationOnTap: false
+      imgObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      imageGenerationPrompt: Generate an image of a cat jumping over a shark on a jet ski.
+      generateImageOnTap: false
+      functionCallingPrompt: Make the text display red
+      doFunctionCallingOnTap: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Text Generation Example"}'
+    - // @input Component.Text textDisplay
+    - "// @input string modelPrompt = \"You are an incredibly smart but witty AI assistant who likes to answers life's greatest mysteries in under two sentences\" {\"widget\":\"text_area\"}"
+    - '// @input string textPrompt = "Is a hotdog a sandwich?" {"widget":"text_area"}'
+    - '// @input bool doTextGenerationOnTap {"label":"Run On Tap"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Image Generation Example"}'
+    - // @input SceneObject imgObject
+    - '// @input string imageGenerationPrompt = "The future of augmented reality" {"widget":"text_area"}'
+    - '// @input bool generateImageOnTap {"label":"Run On Tap"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Function Calling Example"}'
+    - '// @input string functionCallingPrompt = "Make the text display yellow" {"widget":"text_area"}'
+    - '// @input bool doFunctionCallingOnTap {"label":"Run On Tap"}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/4c9393c0-ecbd-17f0-c69e-edd19dc40b86>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a7e1d810-8f94-4287-a3ad-41f02b1375d0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a7e1d810-8f94-4287-a3ad-41f02b1375d0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 67c71db4-81a5-4c48-8886-d11768b2acbd
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/67c71db4-81a5-4c48-8886-d11768b2acbd>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: a6b66964-d619-40c5-99b3-b1247dcdede2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    runOnTap: false
+    systemPrompt: false
+    textDisplay: false
+    userPrompt: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      systemPrompt: "You are a helpful assistant that knows everything about Lens Studio. Keep your answers concise, under two sentences"
+      userPrompt: "What is the capital of France?"
+      runOnTap: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Chat Completions Example"}'
+    - // @input Component.Text textDisplay
+    - '// @input string systemPrompt = "Give your reasoning in no more than one sentence." {"widget":"text_area"}'
+    - '// @input string userPrompt = "Is a hotdog a sandwich" {"widget":"text_area"}'
+    - // @input bool runOnTap
+    - '// @ui {"widget":"group_end"}'

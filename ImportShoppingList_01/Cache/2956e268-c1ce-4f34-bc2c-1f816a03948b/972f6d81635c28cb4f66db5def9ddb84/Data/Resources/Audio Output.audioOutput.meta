@@ -1,0 +1,16 @@
+- !<AssetImportMetadata/5702340c-343e-654f-0fd7-8444f360ad1f>
+  ImportedAssetIds:
+    AudioOutput: !<reference> c6a15f33-e393-45b8-a87d-3814027f7713
+  ImporterName: AudioOutputImporter
+  PrimaryAsset: !<reference> c6a15f33-e393-45b8-a87d-3814027f7713
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

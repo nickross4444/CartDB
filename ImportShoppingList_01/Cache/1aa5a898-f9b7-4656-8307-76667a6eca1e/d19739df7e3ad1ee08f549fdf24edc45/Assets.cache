@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    8e94a50d-9150-4417-b93d-b99574497376: 1aa5a898-f9b7-4656-8307-76667a6eca1e/d19739df7e3ad1ee08f549fdf24edc45/Data/icon_env_reflection.png
+  Assets:
+    - !<FileTexture/8e94a50d-9150-4417-b93d-b99574497376>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 128
+        Height: 128
+  SourceHash: d19739df7e3ad1ee08f549fdf24edc45
+  FileHash: 81099f59d61d49cfc4dd7aab90b5dfae
+  NativePackageItems:
+    []

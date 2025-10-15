@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    29a0f555-d4e6-47a8-b776-47418a9ae231: b363a2d0-54f5-456d-85d9-c2cc382d7be0/9cefbc26c8e9482ddf533954f0bebf1a/Data/icons_ambient.png
+  Assets:
+    - !<FileTexture/29a0f555-d4e6-47a8-b776-47418a9ae231>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 128
+        Height: 128
+  SourceHash: 9cefbc26c8e9482ddf533954f0bebf1a
+  FileHash: 580d41b9e457cf7dca513a40a51c6735
+  NativePackageItems:
+    []

@@ -1,0 +1,105 @@
+{ 
+	"ui": 
+	[
+		{
+        	"label": "Graph Parameters",
+        	"widget": "group_start"
+        },
+{ 
+                	"bindingName": "baseTex", 
+                	"label":       "Texture", 
+                	"widget":      "texture_group",
+                	"sortIndex":   "0",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "shapeColor",
+                	"label":       "Color",
+                	"widget":      "color",
+                	"sortIndex":   "0",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "borderScale",
+                	"label":       "Border Scale",
+                	"widget":      "spinbox",
+                	"step":        "0.01",
+                	"sortIndex":   "1",
+                	"hint":        "Size of the created border",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"label": "Slicing",
+                	"widget": "group_start"
+                },                    
+                    {
+                    	"bindingName": "sliceSizeLeft",
+                    	"label":       "Left",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "2",
+                    	"hint":        "The size of the slice part from the edge horizontally",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "sliceSizeRight",
+                    	"label":       "Right",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "2",
+                    	"hint":        "The size of the slice part from the edge horizontally",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "sliceSizeTop",
+                    	"label":       "Top",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "2",
+                    	"hint":        "The size of the slice part from the edge horizontally",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "sliceSizeBottom",
+                    	"label":       "Bottom",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "2",
+                    	"hint":        "The size of the slice part from the edge horizontally",
+                    	"default":     "1.0"
+                    },
+                {
+                	"widget": "group_end"
+                },
+
+        {
+        	"widget": "group_end"
+        },
+        
+		
+	{
+		"bindingName": "alphaTestThreshold",
+		"widget": "slider",
+		"min" : 0.0,
+		"max" : 1.0,
+		"step": 0.001,
+		"default": 0.5,
+		"hint": "When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear."
+	}
+	
+	],
+	
+	"shaderType": "Mesh3d",
+	
+	"extraDefines":
+	[
+		"SC_ENABLE_RT_CASTER"
+	]
+}

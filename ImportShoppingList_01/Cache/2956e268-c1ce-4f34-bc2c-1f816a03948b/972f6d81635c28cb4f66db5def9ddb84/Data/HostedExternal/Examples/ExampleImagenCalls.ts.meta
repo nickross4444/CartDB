@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/ab2c219b-a90f-45b5-bef4-2273cddf78b5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 50ccf8a6-5a64-4f9a-bd40-7185b0f6ab28
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 50ccf8a6-5a64-4f9a-bd40-7185b0f6ab28
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0e29ecfa-fe5c-433e-8700-cc13c2f44fa3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/0e29ecfa-fe5c-433e-8700-cc13c2f44fa3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d984dc9f-9595-4eb0-a145-5992f06c11c1
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    doGenerateOnTap: false
+    generatePrompt: false
+    imgObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - imgObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      generatePrompt: A futuristic cityscape at sunset
+      doGenerateOnTap: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Generate Image Example"}'
+    - // @input SceneObject imgObject
+    - '// @input string generatePrompt = "A futuristic cityscape at sunset" {"widget":"text_area"}'
+    - '// @input bool doGenerateOnTap {"label":"Run On Tap"}'
+    - '// @ui {"widget":"group_end"}'

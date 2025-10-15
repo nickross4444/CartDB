@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    cf4c443a-de5d-475f-baca-0a2c6d10b9be: 9d974d6c-5111-414b-b0b9-d77bac8f795b/4378733b990bb2b2aec5d127a5c9fb13/Data/IMG_39262.png
+  Assets:
+    - !<FileTexture/cf4c443a-de5d-475f-baca-0a2c6d10b9be>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 320
+        Height: 255
+  SourceHash: 4378733b990bb2b2aec5d127a5c9fb13
+  FileHash: 934a34120abaf7c6da77388f89968d0e
+  NativePackageItems:
+    []

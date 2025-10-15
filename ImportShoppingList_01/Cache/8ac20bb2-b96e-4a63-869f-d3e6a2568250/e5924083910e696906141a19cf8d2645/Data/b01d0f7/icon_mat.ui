@@ -1,0 +1,622 @@
+{ 
+	"ui": 
+	[
+		{
+        	"label": "Graph Parameters",
+        	"widget": "group_start"
+        },
+{
+                	"label":       "Shape",
+                	"bindingType": "defineSelect",
+                	"values":      
+                	[
+                		
+                		{
+                			"value": "NODE_161_DROPLIST_ITEM 0",
+                			"label": "Color"
+                		},
+                		
+                		{
+                			"value": "NODE_161_DROPLIST_ITEM 1",
+                			"label": "Texture"
+                		},
+                		
+                		{
+                			"value": "NODE_161_DROPLIST_ITEM 2",
+                			"label": "Gradient"
+                		}
+                	],
+                	"sortIndex":   "0",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "toQuadShapeGrad",
+                	"bindingType": "define",
+                	"optimize":    true,
+                	"label":       "to Quad Gradient",
+                	"widget":      "checkbox",
+                	"sortIndex":   "0",
+                	"hint":        "Use when Quad Gradient needed"
+                },
+                
+                {
+                	"bindingName": "shapeGradColorA",
+                	"label":       "Gradient Color A",
+                	"widget":      "color",
+                	"sortIndex":   "0",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeGradColorB",
+                	"label":       "Gradient Color B",
+                	"widget":      "color",
+                	"sortIndex":   "0",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeGradPointA",
+                	"label":       "Point A",
+                	"widget":      "spinbox",
+                	"step":        "0.01",
+                	"sortIndex":   "0",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeGradPointB",
+                	"label":       "Point B",
+                	"widget":      "spinbox",
+                	"step":        "0.01",
+                	"sortIndex":   "0",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeGradColorC",
+                	"label":       "Gradient Color C",
+                	"widget":      "color",
+                	"sortIndex":   "0",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeGradColorD",
+                	"label":       "Gradient Color D",
+                	"widget":      "color",
+                	"sortIndex":   "0",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                { 
+                	"bindingName": "baseTex", 
+                	"label":       "Active_texture", 
+                	"widget":      "texture_group",
+                	"sortIndex":   "0",
+                	"hint":        ""
+                },
+                
+                { 
+                	"bindingName": "shapeTexture", 
+                	"label":       "Texture", 
+                	"widget":      "texture_group",
+                	"sortIndex":   "1",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "Active",
+                	"label":       "Active",
+                	"widget":      "checkbox",
+                	"sortIndex":   "2",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "Hover",
+                	"label":       "Hover",
+                	"widget":      "checkbox",
+                	"sortIndex":   "2",
+                	"hint":        ""
+                },
+                
+                {
+                	"bindingName": "shapeScale",
+                	"label":       "Scale",
+                	"widget":      "spinbox",
+                	"step":        "0.01",
+                	"sortIndex":   "2",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeOffset",
+                	"label":       "Offset",
+                	"widget":      "spinbox",
+                	"step":        "0.01",
+                	"sortIndex":   "3",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeScaleGrad",
+                	"label":       "Scale",
+                	"widget":      "spinbox",
+                	"step":        "0.01",
+                	"sortIndex":   "3",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeQuadOffset",
+                	"label":       "Offset",
+                	"widget":      "spinbox",
+                	"step":        "0.01",
+                	"sortIndex":   "3",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeColor",
+                	"label":       "Color",
+                	"widget":      "color",
+                	"sortIndex":   "4",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeAlpha",
+                	"label":       "Alpha",
+                	"widget":      "slider",
+                	"min":         0,
+                	"max":         1,
+                	"step":        "0.01",
+                	"sortIndex":   "5",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeWidthX",
+                	"label":       "Width X",
+                	"widget":      "slider",
+                	"min":         0,
+                	"max":         1,
+                	"step":        "0.01",
+                	"sortIndex":   "6",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeHeightY",
+                	"label":       "Height Y",
+                	"widget":      "slider",
+                	"min":         0,
+                	"max":         1,
+                	"step":        "0.01",
+                	"sortIndex":   "7",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeRoundness",
+                	"label":       "Roundness",
+                	"widget":      "slider",
+                	"min":         0,
+                	"max":         1,
+                	"step":        "0.001",
+                	"sortIndex":   "8",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"bindingName": "shapeRotation",
+                	"label":       "Rotation",
+                	"widget":      "slider",
+                	"min":         0,
+                	"max":         45,
+                	"step":        "0.01",
+                	"sortIndex":   "9",
+                	"hint":        "",
+                	"default":     "1.0"
+                },
+                
+                {
+                	"label": "Pinning",
+                	"widget": "group_start"
+                },                    
+                    {
+                    	"bindingName": "xRightPin",
+                    	"label":       "X Right Pin",
+                    	"widget":      "checkbox",
+                    	"sortIndex":   "10",
+                    	"hint":        ""
+                    },
+                    
+                    {
+                    	"bindingName": "xLeftPin",
+                    	"label":       "X Left Pin",
+                    	"widget":      "checkbox",
+                    	"sortIndex":   "10",
+                    	"hint":        ""
+                    },
+                    
+                    {
+                    	"bindingName": "xOffset",
+                    	"label":       "X Offset",
+                    	"widget":      "slider",
+                    	"min":         -0.5,
+                    	"max":         1.5,
+                    	"step":        "0.01",
+                    	"sortIndex":   "10",
+                    	"hint":        "",
+                    	"default":     "0.5"
+                    },
+                    
+                    {
+                    	"bindingName": "yUpPin",
+                    	"label":       "Y Up Pin",
+                    	"widget":      "checkbox",
+                    	"sortIndex":   "10",
+                    	"hint":        ""
+                    },
+                    
+                    {
+                    	"bindingName": "yDownPin",
+                    	"label":       "Y Down Pin",
+                    	"widget":      "checkbox",
+                    	"sortIndex":   "10",
+                    	"hint":        ""
+                    },
+                    
+                    {
+                    	"bindingName": "yOffset",
+                    	"label":       "Y Offset",
+                    	"widget":      "slider",
+                    	"min":         -0.5,
+                    	"max":         1.5,
+                    	"step":        "0.01",
+                    	"sortIndex":   "10",
+                    	"hint":        "",
+                    	"default":     "0.5"
+                    },
+                {
+                	"widget": "group_end"
+                },
+                
+                {
+                	"label":       "Stroke",
+                	"bindingName": "Tweak_N139",
+                	"bindingType": "define",
+                	"optimize":    true,
+                	"widget":      "group_start",
+                	"sortIndex":   "0",
+                	"hint":        ""
+                }
+                ,                    
+                    {
+                    	"bindingName": "toQuadStrokeGrad",
+                    	"bindingType": "define",
+                    	"optimize":    true,
+                    	"label":       "to Quad Gradient",
+                    	"widget":      "checkbox",
+                    	"sortIndex":   "10",
+                    	"hint":        "Use when Quad Gradient needed"
+                    },
+                    
+                    {
+                    	"label":       "Mode",
+                    	"bindingType": "defineSelect",
+                    	"values":      
+                    	[
+                    		
+                    		{
+                    			"value": "NODE_164_DROPLIST_ITEM 0",
+                    			"label": "Color"
+                    		},
+                    		
+                    		{
+                    			"value": "NODE_164_DROPLIST_ITEM 1",
+                    			"label": "Texture"
+                    		},
+                    		
+                    		{
+                    			"value": "NODE_164_DROPLIST_ITEM 2",
+                    			"label": "Gradient"
+                    		}
+                    	],
+                    	"sortIndex":   "11",
+                    	"hint":        ""
+                    },
+                    
+                    { 
+                    	"bindingName": "strokeTexture", 
+                    	"label":       "Texture", 
+                    	"widget":      "texture_group",
+                    	"sortIndex":   "12",
+                    	"hint":        ""
+                    },
+                    
+                    {
+                    	"bindingName": "shapeGradColorA2",
+                    	"label":       "Gradient Color A",
+                    	"widget":      "color",
+                    	"sortIndex":   "12",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shapeGradColorB2",
+                    	"label":       "Gradient Color B",
+                    	"widget":      "color",
+                    	"sortIndex":   "12",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shapeGradPointA2",
+                    	"label":       "Point A",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "12",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shapeGradPointB2",
+                    	"label":       "Point B",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "12",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shapeGradColorC2",
+                    	"label":       "Gradient Color C",
+                    	"widget":      "color",
+                    	"sortIndex":   "12",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shapeGradColorD2",
+                    	"label":       "Gradient Color D",
+                    	"widget":      "color",
+                    	"sortIndex":   "12",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "strokeScale",
+                    	"label":       "Scale",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "13",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shapeScaleGrad2",
+                    	"label":       "Scale",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "13",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shapeQuadOffset2",
+                    	"label":       "Offset",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "13",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "strokeOffset",
+                    	"label":       "Offset",
+                    	"widget":      "spinbox",
+                    	"step":        "0.01",
+                    	"sortIndex":   "14",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "strokeColor",
+                    	"label":       "Color",
+                    	"widget":      "color",
+                    	"sortIndex":   "15",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "strokeAlpha",
+                    	"label":       "Alpha ",
+                    	"widget":      "slider",
+                    	"min":         0,
+                    	"max":         1,
+                    	"step":        "0.01",
+                    	"sortIndex":   "16",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "strokeThickness",
+                    	"label":       "Thickness",
+                    	"widget":      "slider",
+                    	"min":         0.001,
+                    	"max":         1,
+                    	"step":        "0.001",
+                    	"sortIndex":   "17",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                {
+                	"_bindingName": "Tweak_N139",
+                	"widget": "group_end"
+                }
+                ,
+                
+                {
+                	"label":       "Shadow",
+                	"bindingName": "Tweak_N124",
+                	"bindingType": "define",
+                	"optimize":    true,
+                	"widget":      "group_start",
+                	"sortIndex":   "0",
+                	"hint":        ""
+                }
+                ,                    
+                    {
+                    	"bindingName": "shadowColor",
+                    	"label":       "Color",
+                    	"widget":      "color",
+                    	"sortIndex":   "19",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shadowAlpha",
+                    	"label":       "Alpha",
+                    	"widget":      "slider",
+                    	"min":         0,
+                    	"max":         1,
+                    	"step":        "0.01",
+                    	"sortIndex":   "20",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shadowBlur",
+                    	"label":       "Blur",
+                    	"widget":      "slider",
+                    	"min":         0,
+                    	"max":         1,
+                    	"step":        "0.01",
+                    	"sortIndex":   "21",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shadowDistance",
+                    	"label":       "Distance",
+                    	"widget":      "slider",
+                    	"min":         0,
+                    	"max":         1,
+                    	"step":        "0.01",
+                    	"sortIndex":   "22",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                    
+                    {
+                    	"bindingName": "shadowRotation",
+                    	"label":       "Rotation",
+                    	"widget":      "slider",
+                    	"min":         0,
+                    	"max":         360,
+                    	"step":        "0.01",
+                    	"sortIndex":   "23",
+                    	"hint":        "",
+                    	"default":     "1.0"
+                    },
+                {
+                	"_bindingName": "Tweak_N124",
+                	"widget": "group_end"
+                }
+                ,
+                
+                {
+                	"label": "Advanced Settings",
+                	"widget": "group_start"
+                },                    
+                    {
+                    	"bindingName": "shapeAspectFix",
+                    	"bindingType": "define",
+                    	"optimize":    true,
+                    	"label":       "Aspect Ratio Fix",
+                    	"widget":      "checkbox",
+                    	"sortIndex":   "20",
+                    	"hint":        "Use for Stretch Image Mode"
+                    },
+                    
+                    {
+                    	"bindingName": "innerCutout",
+                    	"bindingType": "define",
+                    	"optimize":    true,
+                    	"label":       "Cut out Inner Shadow",
+                    	"widget":      "checkbox",
+                    	"sortIndex":   "20",
+                    	"hint":        "Use if you need shadow disappear from inner shape"
+                    },
+                    
+                    {
+                    	"bindingName": "shapeColorInvert",
+                    	"bindingType": "define",
+                    	"optimize":    true,
+                    	"label":       "Invert Color",
+                    	"widget":      "checkbox",
+                    	"sortIndex":   "20",
+                    	"hint":        "Use for Masks"
+                    },
+                {
+                	"widget": "group_end"
+                },
+
+        {
+        	"widget": "group_end"
+        },
+        
+		
+	{
+		"bindingName": "alphaTestThreshold",
+		"widget": "slider",
+		"min" : 0.0,
+		"max" : 1.0,
+		"step": 0.001,
+		"default": 0.5,
+		"hint": "When the 'Alpha Test' blend mode is enabled, pixels with alpha values lower than this disappear."
+	}
+	
+	],
+	
+	"shaderType": "Mesh3d",
+	
+	"extraDefines":
+	[
+		"SC_ENABLE_RT_CASTER"
+	]
+}

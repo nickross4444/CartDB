@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    bbca7424-de64-4c3a-8299-31b0d935fb8c: 06152b53-fabd-4aa3-9ff6-4de858ae5fd8/990eb8be9c656637e749c5353d2a6e74/Data/IMG_392512.png
+  Assets:
+    - !<FileTexture/bbca7424-de64-4c3a-8299-31b0d935fb8c>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 768
+        Height: 1024
+  SourceHash: 990eb8be9c656637e749c5353d2a6e74
+  FileHash: 9d3066badcf195530b4746739a834057
+  NativePackageItems:
+    []

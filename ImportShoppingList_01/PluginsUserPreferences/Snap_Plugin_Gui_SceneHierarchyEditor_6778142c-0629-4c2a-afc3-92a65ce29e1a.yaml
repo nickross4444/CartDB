@@ -1,0 +1,13 @@
+CollapsedEntities:
+  type: stringset
+  value:
+    size: 2
+    values:
+      - 17d3a0a4-571f-42b4-a43f-08d01b92d2ec
+      - 222c2d59-94c9-442f-9b0f-7dc33e03dd47
+  options: 4
+PinnedEntities:
+  type: uuids
+  value:
+    size: 0
+  options: 4
