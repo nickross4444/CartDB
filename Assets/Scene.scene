@@ -1098,8 +1098,8 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 3bf689e7-cccf-40e3-87d5-0a391181a099
-  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+    - !<reference> 4ed3d6e9-3cb8-4485-b9e7-0ff7e47f5818
+  Mesh: !<reference> c09ad349-1946-4964-ae72-c43058805b41
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
@@ -3012,6 +3012,42 @@
   Components:
     - !<own> ff69e5c7-a410-45bf-be23-ec56efaa72d0
     - !<own> b96d37ed-e979-4fe4-86f8-8c394d258c2a
+- !<Text3D/443811f3-cd85-4b57-9604-dadf29637a0a>
+  PrefabRemaps:
+    []
+  Name: Text3D
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cd6a96b9-458d-410d-b320-6c3a79877300
+  Text: Cart List
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 14
+  ExtrusionDepth: 0.400000
+  ExtrudeDirection: Both
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/44e00f10-2a19-4c18-99d4-265e134123e8>
   PrefabRemaps:
     []
@@ -3064,7 +3100,7 @@
     {}
   ScriptInputs:
     "":
-      targetingMode: !<float> 4.000000
+      targetingMode: !<float> 1.000000
       targetingVisual: !<float> 1.000000
       ignoreInteractionPlane: false
       keepHoverOnTrigger: false
@@ -3318,10 +3354,10 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 4.136793, y: 13.115629, z: 4.548269}
     Rotation: {x: -174.329529, y: 3.084865, z: 92.671478}
-    Scale: {x: 3.000000, y: 4.000000, z: 0.500000}
+    Scale: {x: 1.400000, y: 1.866667, z: 0.933380}
     HasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> e78b7c5e-ab3c-4901-bedb-2282f9c18f2b
   Components:
     - !<own> e6222bf4-a8d4-41a9-8214-2bdbfa4fbb4f
     - !<own> 45d61243-0f53-449f-b93a-dfede2637faf
@@ -3423,6 +3459,44 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<Text3D/4cd8ebf4-3417-444f-a98a-60fb52be47f9>
+  PrefabRemaps:
+    []
+  Name: Text3D
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cd6a96b9-458d-410d-b320-6c3a79877300
+  Text: |
+    Preferences
+
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 14
+  ExtrusionDepth: 0.400000
+  ExtrudeDirection: Both
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/4efcbced-2def-4876-9b41-03d8919e3bd9>
   PrefabRemaps:
     []
@@ -4139,7 +4213,7 @@
     {}
   ScriptInputs:
     "":
-      targetingMode: !<float> 4.000000
+      targetingMode: !<float> 1.000000
       targetingVisual: !<float> 1.000000
       ignoreInteractionPlane: false
       keepHoverOnTrigger: false
@@ -4462,6 +4536,42 @@
     []
   Components:
     - !<own> 5e64bfed-ee59-4521-9dcc-63a6aed5a795
+- !<Text3D/5db29bbd-e11b-4f52-be1a-6de3866134b0>
+  PrefabRemaps:
+    []
+  Name: Text3D
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cd6a96b9-458d-410d-b320-6c3a79877300
+  Text: Grocery List
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 14
+  ExtrusionDepth: 0.400000
+  ExtrudeDirection: Both
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  EnableBatching: false
 - !<Camera/5dfff79f-9f4d-445c-85bc-90c20710f2b3>
   PrefabRemaps:
     []
@@ -5262,10 +5372,10 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.025662, y: 12.966743, z: 4.882747}
     Rotation: {x: -174.329529, y: 3.084865, z: 92.671478}
-    Scale: {x: 3.000000, y: 4.000000, z: 0.500000}
+    Scale: {x: 1.400000, y: 1.866667, z: 0.933380}
     HasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> d9940251-8c45-4b76-8b64-301a64bd784f
   Components:
     - !<own> 20e3c542-7a80-4fe3-87b2-67ec115c2a4b
     - !<own> 8b68c573-b43a-4b13-a23b-d96507fc50a3
@@ -5904,8 +6014,8 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 3bf689e7-cccf-40e3-87d5-0a391181a099
-  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+    - !<reference> 4ed3d6e9-3cb8-4485-b9e7-0ff7e47f5818
+  Mesh: !<reference> c09ad349-1946-4964-ae72-c43058805b41
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
@@ -7136,7 +7246,7 @@
     {}
   ScriptInputs:
     "":
-      targetingMode: !<float> 4.000000
+      targetingMode: !<float> 1.000000
       targetingVisual: !<float> 1.000000
       ignoreInteractionPlane: false
       keepHoverOnTrigger: false
@@ -9062,10 +9172,10 @@
   LocalTransform: !<TransformEntity>
     Position: {x: -4.162910, y: 12.863727, z: 5.278067}
     Rotation: {x: -174.329529, y: 3.084865, z: 92.671478}
-    Scale: {x: 3.000000, y: 4.000000, z: 0.500000}
+    Scale: {x: 1.400000, y: 1.866667, z: 0.933380}
     HasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> c91f76c0-1c05-4997-a2f0-605d3d9a6ee8
   Components:
     - !<own> 78c84280-9aa0-49fc-85dc-b901a58f671e
     - !<own> 57ec8c2f-d240-4186-8a6d-f0218d801e2c
@@ -10260,6 +10370,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/c91f76c0-1c05-4997-a2f0-605d3d9a6ee8>
+  PrefabRemaps:
+    []
+  Name: Preferences
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.018100, y: 0.000000, z: -0.585840}
+    Rotation: {x: 180.000000, y: -0.000000, z: 90.000000}
+    Scale: {x: 0.500000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4cd8ebf4-3417-444f-a98a-60fb52be47f9
 - !<SceneObject/ca3187bd-f1ac-4c5f-a502-ac2d8cd80e71>
   PrefabRemaps:
     []
@@ -10810,6 +10935,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/d9940251-8c45-4b76-8b64-301a64bd784f>
+  PrefabRemaps:
+    []
+  Name: Grocery List
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.018100, y: -0.000000, z: -0.585837}
+    Rotation: {x: 180.000000, y: -0.000000, z: 90.000000}
+    Scale: {x: 0.500000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5db29bbd-e11b-4f52-be1a-6de3866134b0
 - !<SceneObject/d9aa938c-9fc9-4d06-b461-632aab7e098d>
   PrefabRemaps:
     []
@@ -11192,8 +11332,8 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 3bf689e7-cccf-40e3-87d5-0a391181a099
-  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+    - !<reference> 4ed3d6e9-3cb8-4485-b9e7-0ff7e47f5818
+  Mesh: !<reference> c09ad349-1946-4964-ae72-c43058805b41
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
@@ -11239,6 +11379,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/e78b7c5e-ab3c-4901-bedb-2282f9c18f2b>
+  PrefabRemaps:
+    []
+  Name: Grocery List
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.018100, y: 0.000000, z: -0.585842}
+    Rotation: {x: 180.000000, y: -0.000000, z: 90.000000}
+    Scale: {x: 0.500000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 443811f3-cd85-4b57-9604-dadf29637a0a
 - !<SceneObject/e7fc50b4-bcee-4ddd-8dff-743d23246139>
   PrefabRemaps:
     []
