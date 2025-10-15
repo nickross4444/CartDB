@@ -35,7 +35,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -0.313143, y: 0.168583, z: 1.545201}
+    Position: {x: 0.086900, y: 0.168583, z: 1.545201}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 3.000000, y: 3.000000, z: 3.000000}
     HasSegmentScaleCompensation: false
@@ -1394,7 +1394,7 @@
   PrefabRemaps:
     []
   Name: Welcome Containter Frame
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1805,16 +1805,16 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> b7768f04-ce8d-4cc0-ad8e-e42117ca5223
+    - !<reference> b8e5c52d-bc22-4d22-be7b-749129eb9809
   Text: "Let's shop!"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 20
+  FontSize: 14
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2508,7 +2508,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -4.333404, y: 3.521464, z: 0.000000}
+    Position: {x: -2.283678, y: 4.341465, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -2625,7 +2625,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> b7768f04-ce8d-4cc0-ad8e-e42117ca5223
+    - !<reference> b8e5c52d-bc22-4d22-be7b-749129eb9809
   Text: CartDB
   Editable: false
   ShowEditingPreview: true
@@ -2634,7 +2634,7 @@
   FontSize: 48
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3243,8 +3243,8 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 74
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 50
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3254,7 +3254,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Color: {x: 0.054902, y: 0.956863, z: 0.733333, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
@@ -3372,7 +3372,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> ba1c32ad-7942-487c-a53b-67c481ea430a
+    - !<reference> b8e5c52d-bc22-4d22-be7b-749129eb9809
   Text: Cart
   Editable: false
   ShowEditingPreview: true
@@ -3381,7 +3381,7 @@
   FontSize: 100
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3605,8 +3605,8 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 25
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3818,7 +3818,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> b7768f04-ce8d-4cc0-ad8e-e42117ca5223
+    - !<reference> b8e5c52d-bc22-4d22-be7b-749129eb9809
   Text: "First of all:"
   Editable: false
   ShowEditingPreview: true
@@ -3827,7 +3827,7 @@
   FontSize: 24
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -4210,7 +4210,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.749480, y: -3.370821, z: 1.000000}
+    Position: {x: 0.749480, y: -1.730822, z: 1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -4967,7 +4967,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -3.804555, y: -0.106942, z: 1.000000}
+    Position: {x: -3.804555, y: 1.533057, z: 1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -5860,7 +5860,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 8.920803, y: -15.380908, z: 1.000000}
+    Position: {x: 8.920803, y: -16.242794, z: 1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -6686,10 +6686,10 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 27
+  FontSize: 20
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -7253,10 +7253,10 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 20
+  FontSize: 14
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -7880,7 +7880,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -0.630052, y: 0.168583, z: 1.545201}
+    Position: {x: -0.090100, y: 0.168583, z: 1.545201}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 3.000000, y: 3.000000, z: 3.000000}
     HasSegmentScaleCompensation: false
@@ -8144,7 +8144,6 @@
   ScriptInputsDefault:
     _appearance: true
     _padding: true
-    allowScaling: true
     autoScaleContent: true
     relativeZ: true
     _onlyInteractOnBorder: true
@@ -8175,7 +8174,7 @@
       _appearance: Large
       _innerSize: !<Vec2> {x: 30.000000, y: 30.000000}
       _padding: !<Vec2> {x: 0.000000, y: 0.000000}
-      allowScaling: true
+      allowScaling: false
       autoScaleContent: true
       relativeZ: true
       _onlyInteractOnBorder: false
@@ -8671,8 +8670,8 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 30
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -8838,10 +8837,10 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 88
+  FontSize: 57
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -9065,10 +9064,10 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 20
+  FontSize: 14
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -9261,10 +9260,10 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 20
+  FontSize: 14
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -9614,7 +9613,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -14.525887, y: 16.435457, z: 0.000000}
+    Position: {x: -12.525900, y: 16.435457, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -9634,13 +9633,15 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "Your Shopping companion on Spectacles! Watch your spending, calculate you calories, get an overall nutritional score."
+  Text: |-
+    Your Shopping companion on Spectacles! Watch your spending, calculate you calories
+    and get an overall nutritional score.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 46
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 30
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -9943,7 +9944,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -8.843852, y: -0.074906, z: 0.000000}
+    Position: {x: -8.843852, y: 1.565093, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -10028,7 +10029,6 @@
   ScriptInputsDefault:
     _appearance: true
     _padding: true
-    allowScaling: true
     autoScaleContent: true
     relativeZ: true
     _onlyInteractOnBorder: true
@@ -10059,7 +10059,7 @@
       _appearance: Large
       _innerSize: !<Vec2> {x: 35.000000, y: 28.000000}
       _padding: !<Vec2> {x: 0.000000, y: 0.000000}
-      allowScaling: true
+      allowScaling: false
       autoScaleContent: true
       relativeZ: true
       _onlyInteractOnBorder: false
@@ -10241,7 +10241,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 9.248980, y: 15.488025, z: 1.000000}
+    Position: {x: 0.000000, y: -13.311600, z: 1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -10549,8 +10549,8 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 74
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 56
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -10560,7 +10560,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Color: {x: 0.054902, y: 0.956863, z: 0.733333, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
@@ -10695,8 +10695,8 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 30
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -10791,8 +10791,8 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 25
+  Font: !<reference> 538c2723-8daa-4e77-a6af-158d2456797e
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -11692,7 +11692,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -8.843852, y: -3.370820, z: 0.000000}
+    Position: {x: -8.843852, y: -1.730821, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -11844,7 +11844,6 @@
   ScriptInputsDefault:
     _appearance: true
     _padding: true
-    allowScaling: true
     autoScaleContent: true
     relativeZ: true
     _onlyInteractOnBorder: true
@@ -11863,8 +11862,6 @@
     itemSnapping: true
     worldSnapping: true
     _showFollowButton: true
-    useFollowBehavior: true
-    _following: true
     _showCloseButton: true
     _enableInteractionPlane: true
     _interactionPlaneOffset: true
@@ -11878,7 +11875,7 @@
       _appearance: Large
       _innerSize: !<Vec2> {x: 15.000000, y: 5.000000}
       _padding: !<Vec2> {x: 0.000000, y: 0.000000}
-      allowScaling: true
+      allowScaling: false
       autoScaleContent: true
       relativeZ: true
       _onlyInteractOnBorder: false
@@ -11897,8 +11894,8 @@
       itemSnapping: false
       worldSnapping: false
       _showFollowButton: false
-      useFollowBehavior: false
-      _following: false
+      useFollowBehavior: true
+      _following: true
       _showCloseButton: false
       _enableInteractionPlane: true
       _interactionPlaneOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}

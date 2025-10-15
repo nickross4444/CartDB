@@ -1,0 +1,201 @@
+- !<Material/b8e5c52d-bc22-4d22-be7b-749129eb9809>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> c1d4fc82-3732-4916-9188-79f782ff1206
+- !<PassInfo/c1d4fc82-3732-4916-9188-79f782ff1206>
+  CachedProperties:
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_LODValue_N029:
+        typeIdx: 1
+        value: 0.000000
+    - Port_LODValue_N039:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Normal_N006:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_UVCoord_N039:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_Value3_N014:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value3_N022:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value3_N060:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N014:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N022:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N060:
+        typeIdx: 1
+        value: 0.000000
+    - Port_WorldNormal_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldPosition_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - iridescenceMapBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - iridescenceMapDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - iridescenceMapTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - iridescenceMapUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - isProxyMode:
+        typeIdx: 2
+        value: false
+    - mainColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - receivesRayTracedAo:
+        typeIdx: 2
+        value: false
+    - receivesRayTracedDiffuseIndirect:
+        typeIdx: 2
+        value: false
+    - receivesRayTracedReflections:
+        typeIdx: 2
+        value: false
+    - receivesRayTracedShadows:
+        typeIdx: 2
+        value: false
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: PremultipliedAlphaAuto
+  Properties:
+    Port_AO_N006:
+      typeIdx: 4
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    Port_Emissive_N006:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Port_Input1_N011:
+      typeIdx: 1
+      value: 2.000000
+    Port_Input1_N012:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input1_N025:
+      typeIdx: 1
+      value: 0.500000
+    Port_Input1_N058:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input2_N021:
+      typeIdx: 1
+      value: 0.200000
+    Port_Input2_N040:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N058:
+      typeIdx: 1
+      value: 1.000000
+    Port_Opacity_N006:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxA_N049:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxB_N049:
+      typeIdx: 1
+      value: 0.833500
+    Port_RangeMinA_N049:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinB_N049:
+      typeIdx: 1
+      value: 0.166500
+    Port_Scale_N041:
+      typeIdx: 3
+      value: {x: 3.000000, y: 3.000000}
+    Port_SpecularAO_N006:
+      typeIdx: 4
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    baseColor:
+      typeIdx: 5
+      value: {x: 0.023529, y: 0.749020, z: 0.529412, w: 1.000000}
+    exponent:
+      typeIdx: 1
+      value: 1.250000
+    intensity:
+      typeIdx: 1
+      value: 2.700000
+    iridescenceMap:
+      typeIdx: 9
+      value:
+        id: e37915d8-3d3c-4170-928b-2d1e0248c93e
+        sampler:
+          filteringMode: Bilinear
+          wrapModeU: ClampToEdge
+          wrapModeV: ClampToEdge
+          wrapModeW: ClampToEdge
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+          mipmaps: false
+        type: Texture2D
+    metallic:
+      typeIdx: 1
+      value: 0.000000
+    mixAmount:
+      typeIdx: 1
+      value: 0.500000
+    noiseIntensity:
+      typeIdx: 1
+      value: 0.180000
+    noiseScale:
+      typeIdx: 3
+      value: {x: 1.000000, y: 1.000000}
+    roughness:
+      typeIdx: 1
+      value: 0.200000
+    thinFilmWeight:
+      typeIdx: 1
+      value: 0.750000
+  Pass: !<reference> d4863be6-d1a3-4a70-8379-b79e2210da9f
