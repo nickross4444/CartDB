@@ -89,9 +89,16 @@ export class ProductManager extends BaseScriptComponent {
             this.log("OnStartEvent triggered, calling onStart()");
             this.onStart();
         });
+
+        // Hide info panel at start, but delay slightly to let Frame initialize
         if (this.infoPanel) {
-            this.infoPanel.enabled = false;
+            const sceneObject = this.infoPanel.getSceneObject();
+            if (sceneObject) {
+                sceneObject.enabled = false;
+                this.log("Info panel SceneObject disabled at start");
+            }
         }
+
         this.log("ProductManager onAwake() complete");
     }
 
@@ -232,17 +239,37 @@ export class ProductManager extends BaseScriptComponent {
      * Authenticate user with Snap Cloud
      */
     async signInUser() {
-        const { data, error } = await this.client.auth.signInWithIdToken({
-            provider: 'snapchat',
-            token: ''
-        });
+        try {
+            this.log("Calling signInWithIdToken...");
 
-        if (error) {
-            this.log("Sign in error: " + JSON.stringify(error));
-        } else {
-            const { user } = data;
-            this.uid = JSON.stringify(user.id);
-            this.log("User authenticated");
+            // Create a timeout promise
+            const timeoutPromise = new Promise((_, reject) => {
+                const delayedEvent = this.createEvent("DelayedCallbackEvent") as DelayedCallbackEvent;
+                delayedEvent.bind(() => reject(new Error("Sign-in timeout after 5 seconds")));
+                delayedEvent.reset(5);
+            });
+
+            // Race between sign-in and timeout
+            const signInPromise = this.client.auth.signInWithIdToken({
+                provider: 'snapchat',
+                token: ''
+            });
+
+            const result = await Promise.race([signInPromise, timeoutPromise]) as any;
+
+            if (result.error) {
+                this.log("Sign in error: " + JSON.stringify(result.error));
+                this.uid = ""; // Set empty to allow initialization to continue
+            } else if (result.data && result.data.user) {
+                this.uid = JSON.stringify(result.data.user.id);
+                this.log("User authenticated successfully");
+            } else {
+                this.log("Sign in returned unexpected result");
+                this.uid = ""; // Set empty to allow initialization to continue
+            }
+        } catch (error) {
+            this.log(`Sign in exception: ${error}`);
+            this.uid = ""; // Set empty to allow initialization to continue
         }
     }
 
@@ -425,20 +452,66 @@ export class ProductManager extends BaseScriptComponent {
      * Open the information panel
      */
     public openInfoPanel() {
-        if (this.infoPanel) {
-            this.infoPanel.enabled = true;
-            this.log("Information panel opened");
+        if (!this.infoPanel) {
+            this.log("WARNING: infoPanel not assigned - cannot open");
+            return;
         }
+
+        // Get the root SceneObject - go up the hierarchy to find the top-level panel object
+        let sceneObject = this.infoPanel.getSceneObject();
+
+        // Enable the SceneObject (this will enable all children automatically)
+        if (sceneObject) {
+            sceneObject.enabled = true;
+            this.log(`Info panel SceneObject '${sceneObject.name}' enabled`);
+        }
+
+        // Enable the component
+        this.infoPanel.enabled = true;
+
+        // If there's a Frame, show it
+        if (this.infoPanelFrame && typeof this.infoPanelFrame.showVisual === 'function') {
+            try {
+                this.infoPanelFrame.showVisual();
+                this.log("Frame showVisual() called");
+            } catch (error) {
+                this.log(`Frame showVisual() failed: ${error}`);
+            }
+        }
+
+        this.log("Information panel opened");
     }
 
     /**
      * Close the information panel
      */
     public closeInfoPanel() {
-        if (this.infoPanel) {
-            this.infoPanel.enabled = false;
-            this.log("Information panel closed");
+        if (!this.infoPanel) {
+            return;
         }
+
+        // If there's a Frame, hide it first
+        if (this.infoPanelFrame && typeof this.infoPanelFrame.hideVisual === 'function') {
+            try {
+                this.infoPanelFrame.hideVisual();
+                this.log("Frame hideVisual() called");
+            } catch (error) {
+                this.log(`Frame hideVisual() failed: ${error}`);
+            }
+        }
+
+        // Get the SceneObject
+        let sceneObject = this.infoPanel.getSceneObject();
+
+        // Disable the SceneObject (this will disable all children automatically)
+        if (sceneObject) {
+            sceneObject.enabled = false;
+            this.log(`Info panel SceneObject '${sceneObject.name}' disabled (children disabled too)`);
+        }
+
+        // Disable the component
+        this.infoPanel.enabled = false;
+        this.log("Information panel closed");
     }
 
     /**

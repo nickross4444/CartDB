@@ -103,7 +103,14 @@ export class CartManager extends BaseScriptComponent {
         this.log("✓ ProductService obtained from ProductManager");
 
         // Load initial cart state
-        await this.refreshCartState();
+        try {
+            this.log("Loading initial cart state...");
+            await this.refreshCartState();
+            this.log("Initial cart state loaded successfully");
+        } catch (error) {
+            this.log(`ERROR loading cart state: ${error}`);
+            this.log(`Error details: ${JSON.stringify(error)}`);
+        }
     }
 
     /**
@@ -240,28 +247,37 @@ export class CartManager extends BaseScriptComponent {
             return;
         }
 
-        // Get all cart items from database
-        const cartItems = await this.cartService.getCartItems();
+        try {
+            this.log("Fetching cart items from database...");
+            // Get all cart items from database
+            const cartItems = await this.cartService.getCartItems();
+            this.log(`Found ${cartItems.length} cart items`);
 
-        // Get product IDs
-        const productIds = cartItems
-            .map(item => item.product_id)
-            .filter(id => id !== null) as number[];
+            // Get product IDs
+            const productIds = cartItems
+                .map(item => item.product_id)
+                .filter(id => id !== null) as number[];
+            this.log(`Fetching product details for ${productIds.length} products...`);
 
-        // Fetch all products in one query
-        const products = await this.productService.getProductsByIds(productIds);
+            // Fetch all products in one query
+            const products = await this.productService.getProductsByIds(productIds);
+            this.log(`Fetched ${products.length} product details`);
 
-        // Enrich cart items with product data
-        this.cartState = cartItems.map(cartItem => {
-            const product = products.find(p => p.id === cartItem.product_id) || null;
-            return { cartItem, product };
-        });
+            // Enrich cart items with product data
+            this.cartState = cartItems.map(cartItem => {
+                const product = products.find(p => p.id === cartItem.product_id) || null;
+                return { cartItem, product };
+            });
 
-        this.log(`Cart updated: ${this.cartState.length} items`);
-        this.updateDisplay();
+            this.log(`Cart updated: ${this.cartState.length} items`);
+            this.updateDisplay();
 
-        if (this.onCartUpdatedCallback) {
-            this.onCartUpdatedCallback();
+            if (this.onCartUpdatedCallback) {
+                this.onCartUpdatedCallback();
+            }
+        } catch (error) {
+            this.log(`ERROR in refreshCartState: ${error}`);
+            this.log(`Error details: ${JSON.stringify(error)}`);
         }
     }
 
