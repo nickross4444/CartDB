@@ -29,6 +29,7 @@
     addToCartButton: false
     cancelButton: false
     cartManager: false
+    infoPanel: false
     logText: false
     nutritionScoreText: false
     productDetailsText: false
@@ -53,6 +54,7 @@
       cartManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       addToCartButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       cancelButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      infoPanel: !<reference.Component> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -66,3 +68,4 @@
     - '// @input AssignableType_1 cartManager {"hint":"Optional: CartManager reference for automatic add-to-cart integration"}'
     - '// @input AssignableType_2 addToCartButton {"hint":"Optional: Button to add current product to cart"}'
     - '// @input AssignableType_3 cancelButton {"hint":"Optional: Button to cancel/clear current product selection"}'
+    - '// @input Component.Component infoPanel {"hint":"Optional: Component to enable on scan"}'
