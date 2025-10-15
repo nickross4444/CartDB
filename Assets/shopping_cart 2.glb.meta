@@ -1,15 +1,14 @@
 - !<AssetImportMetadata/52d95bc4-7627-4711-a6d5-aea634f42d59>
   ImportedAssetIds:
     .hidden/Chrome: !<reference> 49dc5989-5e27-4a5d-b552-7724919ab58c
-    035518aaf050f4ba: !<reference> 343479b2-e135-4b7c-b6e2-c85d38b146a2
-    0b2bf5ca834b02bb: !<reference> 47fdb370-6ade-4eba-8837-201e03c2aae3
-    3d523be08495163f: !<reference> d9e654bb-b166-4a1a-8899-aaf3aa36584a
-    6219d73ae8e2a78e: !<reference> 1a8df6ef-c855-43c5-85fc-b90487a7de47
-    624f6792bd6e379e: !<reference> 78cd2da5-0eb4-4db6-8a83-a4c5c8dc4a35
-    7507e15c48557726: !<reference> a391d8fa-8b2a-46ac-bccf-e9fc308030ec
-    7a0dd5cd69df73fa: !<reference> b8966c38-5281-40cf-b6f2-26c94f32e294
-    83437620bbb97154: !<reference> 4f5abd78-ef9e-49fc-87a7-fbcd694d7f14
-    93b9f129c83dbc6c: !<reference> 1b93d139-1fd9-48c3-b63c-e6f1c0b9e024
+    0025ed9e47ac1ef4: !<reference> 40ed26b3-023d-46fc-a3e7-31a09fdfabe0
+    12addf276a8da4d9: !<reference> c57f9bea-846e-4ddc-aab4-df299c342594
+    4a3e924fad0e2f27: !<reference> 09cca90f-3075-4af2-ae3b-b64b4e4326ab
+    4ee8e5f2b2f1d5b9: !<reference> 4dbd70cf-5e5e-4b77-b62d-f2b87f55851f
+    5456cd091e7655cc: !<reference> 5e6aa213-9d9e-4b62-b209-09cd45323bf5
+    66780cf3a4dcb2b8: !<reference> 9d3aa06d-ae88-4327-a561-55d5f9926f48
+    73b23d38d8f12426: !<reference> 99f4ca37-d60c-440e-8a74-78b3e14e850d
+    7f2a9bc0ba744a26: !<reference> 93fdbbba-38a0-4a17-af4c-a3da77a1c780
     Materials/Chrome: !<reference> 76818628-b347-4de3-8e98-f531129fb42d
     Materials/Chrome|Chrome|GraphPassInfo: !<reference> bde71109-d314-47f7-90b1-1fc9782d0fb3
     Materials/Griff: !<reference> 340dbc6e-fc7a-4062-98ab-3eaefb630e02
@@ -20,10 +19,11 @@
     Meshes/Object_1: !<reference> 275ff372-13de-44c8-a2e7-964153ddbbc8
     Meshes/Object_2: !<reference> 73e46b1f-4c20-41de-9c58-d3de4ea2b90d
     Scene: !<reference> 38405c98-59f5-479a-a0b9-a19d7a4f9696
-    d258d766a0f81ffa: !<reference> e3e2257c-da57-4507-ac2e-fd39a987256f
-    e7b02c9e1e8e30f8: !<reference> 9f8aec34-792d-4716-92b2-3645cbfaf50a
-    eb112dcddf665ed3: !<reference> 3518a5ea-0093-447d-8eff-334c5c8fcb09
-    ebcd1102e8c634e3: !<reference> c8250f49-87f6-47be-a2d4-6b348db2098c
+    d9642c9ea9683ec9: !<reference> 92c8dd43-709e-4eac-a4c6-a0941811db5a
+    e7b4807ff1764824: !<reference> 8da19337-6890-454b-a84b-e5c886ec46ea
+    f0eb60be93325aa1: !<reference> 82483716-40e3-46ef-ad09-a72ad217c5dc
+    fb80737465b67c61: !<reference> 3d687a63-60d5-4520-b4c7-7fcfd1f50f15
+    ff7936aad4ab157c: !<reference> 1d9632fc-8897-4fe5-9240-62933ea93b3c
   ImporterName: GltfImporter
   PrimaryAsset: !<reference> 38405c98-59f5-479a-a0b9-a19d7a4f9696
   PackageType: LegacyPackage
